@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="wrap">
+      <h2>Civil Era</h2>
+      <div id="scenetext"></div>
+      <div id="question"></div>
+      <div id="questionAnswer">
+          <form id ="answerForm">
+          <input type="text" id="answer">
+          <button type="submit" id="answerButton">Go</button>
+          <div id="message"></div>
+          </form>
+      </div>
+    </div>
+    <!-- scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="0.basicInfo.js"></script>
+    <script src="0.gamebase.js"></script>
+    <script src="1.1.intro.js"></script>
+    <script src="1.Barricade.js"></script>
+    <script src="1.Hide.js"></script>
+    <script src="1.Investigate.js"></script>
+    <script src="1.ReturnToSleep.js"></script>
+    <script src="Level_Select.js"></script>
+    <script src ="2.Captured.js"></script>
+    <script src ="1.5.Escort.js"></script>
+    <script src ="1.5.Flee_OntoCapture.js"></script>
+    <script src ="1.5.CaptureByEnemyEscort.js"></script>
+    <script>
+      scene1(); // start with scene 1
+    </script>
+  </body>
+</html>

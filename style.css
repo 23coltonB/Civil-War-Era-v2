@@ -1,0 +1,24 @@
+#wrap {
+  min-width: 500px;
+  max-width: 40%;
+  margin: auto;
+}
+
+#scenetext, #question, #questionAnswer {
+  background: #f6f6f6;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+#scenetext img {
+  max-width: 100%;
+}
+#question {
+  background-color: aqua;
+}
+
+#questionAnswer {
+  background-color: lightgreen;
+}
