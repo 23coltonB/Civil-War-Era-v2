@@ -53,7 +53,8 @@ function scene31(){
   }else{
     LP = Number(LP) + 10;
     $('#scenetext').html('You turn around, ignoring the knocking. <br> <br> "Come back in the morning!" you call out as you slip back under your covers of your bed. You shut your eyes, and you slowly fall back into sleep.<br> <br> Your current LP (Level Points) count is ' + LP + '!');
-  $('#question').html('Press Enter to go to Level Select');   
+  $('#question').html('Press Enter to go to Level Select');
+    var End = true;
    var sleepCover = true;
   }
 }
@@ -86,7 +87,11 @@ function scene31Answer(answer){
     scene35();
   }
   if (answer == 'Enter'){
+    if (End == true){
     levelSelect();
+    }else{
+      $('#message').html('Nice try! Select one of the TRUE option!')
+    }
   }
 }
 
@@ -168,6 +173,7 @@ function scene29(){
     LP = Number(LP) + 10;
     $('#scenetext').html('Congratgulations! You defeated all your intruders!<br> <br> Your current LP (Level Points) count is ' + LP + '!');
     $('#question').html('Press Enter to go to Level Select');
+    var End = true;
     var evation2 = true;
   }
 }
@@ -200,7 +206,11 @@ function scene29Answer(answer){
     scene39();
   }
   if (answer == 'Enter'){
+    if (End == true){
     levelSelect();
+    }else{
+      ('#message').html('Nice try! Select one of the TRUE options!')
+    }
   }
 }
 
@@ -277,6 +287,7 @@ function scene34(){
      $('#scenetext').html("You aren't as powerfull without your staff, but it'll have to work. You throw your hands out, shouting <br> ''Globus Igneus!' But, to your dismay, only a small puff of smoke leaves your open palms. Before you can try again, you are swiftly surrounded, and captured by your assailants <br> <br> Your current LP (Level Points) count is " + LP + "!");
      $('#question').html('Press Enter to go to Level Select');
      var enemyCapture = true;
+    var End = true;
   }
 }
 
@@ -296,7 +307,11 @@ function scene34Answer(answer){
       scene42();
     }
     if (answer == 'Enter'){
-      levelSelect();
+      if (End == True){
+        levelSelect();
+      }else{
+        ('#message').html('Nice try! Next time, choose the TRUE option.')
+      }
     }
   }
 
@@ -310,6 +325,7 @@ function scene35(){
     $('#scenetext').html('Before you can even get the words out of your mouth, they are already upon you, and swiftly silence you.<br> <br> Your current LP (Level Points) count is ' + LP + '!');
     $('#question').html('Press Enter to go to Level Select');
     var enemyCapture = true;
+    var End = true;
   }
 }
 
@@ -328,7 +344,11 @@ function scene35Answer(answer){
     scene45();
   }
   if (answer == 'Enter'){
-    levelSelect();
+      if (End == True){
+        levelSelect();
+      }else{
+        ('#message').html('Nice try! Next time, choose the TRUE option.')
+    }
   }
 }
 
@@ -370,6 +390,7 @@ currentScene = 36;
         $('#scenetext').html("You attempt to dive out of the reach of the assailents, but you didn't move fast enough. You swiftly are disarmed of your " + player.weapons + ', something sharp touching your throat.<br> <br> Your current LP (Level Points) count is ' + LP + '!');
         $('#question').html('Press Enter to go to Level Select');
         var enemyCapture = true;
+        var End = true;
       }
     }
   }
@@ -377,7 +398,11 @@ currentScene = 36;
 
 function scene36Answer(answer){
   if (answer == 'Enter'){
-    levelSelect();
+    if (End == True){
+        levelSelect();
+      }else{
+        ('#message').html('Nice try! Next time, choose the TRUE option.')
+    }
   }
   if (answer == ''){
     scene29(); 
@@ -400,13 +425,18 @@ currentScene = 37;
       $('#scenetext').html("You stand your ground, and prepare to defend yourself from the three attackers. The first one charges at you hard, knocking the" + player.weapons +", you are unable to retrieve your weapon in time.<br> <br> Your current LP (Level Points) count is " + LP + "!");
       $('#question').html('Press Enter to go to Level Select');
       var enemyCapture = true;
+      var End = true;
     }
   }
 }
 
 function scene37Answer(answer){
   if (answer == 'Enter'){
-    levelSelect();
+    if (End == True){
+        levelSelect();
+      }else{
+        ('#message').html('Nice try! Next time, choose the TRUE option.')
+    }
   }
   if (answer == ''){
     scene29(); 
@@ -430,13 +460,18 @@ currentScene = 38;
       $('#scenetext').html('You throw your hands out towards the advancing assailent. With your staff, you slightly more powerfull than you are without it. <br> <br> "Fulgur Percutiens!" you shout despretly, hoping that it will work this time. Only a small bolt shoots from your fingers, no where near close enough for it to be lethal. You are swiftly surrounded, and disarmed of your weapon.<br> <br> Your current LP (Level Points) count is ' + LP + '!');
       $('#question').html('Press Enter to go to Level Select');
       var enemyCapture = true;
+      var End = true;
     }
   }
 }
 
 function scene38Answer(answer){
   if (answer == 'Enter'){
-  levelSelect();
+  if (End == True){
+        levelSelect();
+      }else{
+        ('#message').html('Nice try! Next time, choose the TRUE option.')
+    }
   }
     if (answer == ''){
     scene29(); 
@@ -476,6 +511,7 @@ function scene39(){
         LP = Number(LP) + 17;
         $('#scenetext').html('You charge head first into your assailents, screaming at them with your world renound battle cry. You try to use your '+ player.weapons + ' to harm your foes, but you are swiftly overwealmed. You are disarmed and surrounded.<br> <br> Your current LP (Level Points) count is ' + LP + '!');
         var enemyCapture = true;
+        var End = true;
         $('#question').html('Press Enter to go to Level Select');
       }
     }
@@ -484,7 +520,11 @@ function scene39(){
 
 function scene39Answer(answer){
   if (answer == 'Enter'){
-    levelSelect();
+    if (End == True){
+        levelSelect();
+      }else{
+        ('#message').html('Nice try! Next time, choose the TRUE option.')
+    }
   }
   if (answer == ''){
     scene29(); 
@@ -626,6 +666,7 @@ if (x <= player.charisma && x <= player.charisma && x <= player.charisma){
       $('#scenetext').html('"Wait! I will pa-" Before you can finish, you are swiflty overrun by the assailents.<br> <br> Your current LP (Level Points) count is ' + LP + '!');
        $('#question').html('Type Enter to go to Level Select');
     var enemyCapture = true;
+  var End = true;
   }
 }
 
@@ -641,7 +682,11 @@ function scene41Answer(answer){
     scene44();
   }
   if (answer == 'Enter'){
-    levelSelect();
+    if (End == True){
+        levelSelect();
+      }else{
+        ('#message').html('Nice try! Next time, choose the TRUE option.')
+    }
   }
 }
 

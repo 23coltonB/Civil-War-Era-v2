@@ -573,7 +573,7 @@ function scene68(){
 }
 
 function scene68Answer(answer){
-  if (answer == 'Enter'){
+  if (answer == 'Enter' && answer == ''){
     levelSelect();
   }
 }
@@ -586,7 +586,7 @@ function scene69(){
 }
 
 function scene69Answer(answer){
-    if (answer == 'Enter'){
+    if (answer == 'Enter' && answer == ''){
     levelSelect();
   }
 }

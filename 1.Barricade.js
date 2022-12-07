@@ -184,6 +184,7 @@ function scene17(){
       LP = Number(LP) + 10;
       $('#scenetext').html('You press your ear gentally agenst your door, and you swiftly hear something loud coming from the other side. You can hear your defenses falling, after all, in your haste, you did' + not + ' set them up well. However, you can hear your trap snap into life, and someone screaming in responce. You hear the front door of the kitchen fly open and you hold your breath. You can hear the soft foot steps within the kitchen, and you pray that he does' + not + ' find you. <br> Luckly for you, he does' + not + '. You hear the man behind your door run out to assist his fallen comrade. <br> Or at least you think so. You don' + not + ' move out of your hiding spot until all is quite. <br> <br> Your current LP (Level Points) count is ' + LP + '!');
           $('#question').html('Type Enter to go to Level Select');
+      var End = true;
     }else{
       if (armed == true && x <= player.accuracyM || player.speed){
       $('#scenetext').html("You press your ear gentally agenst your door, and you swiftly hear something loud coming from the other side. You can hear your defenses falling, after all, in your haste, you didn't set them up well. However, you can hear your trap snap into life, and someone screaming in responce. You hear the front door of the kitchen fly open and you hold your breath. You can hear the soft foot steps within the kitchen, and you pray that he doesn't find you. <br> Unfortunately for you, he does. The door in front of you flys open, revealing the guard in front of you. The gurad in front of you towers over you, as he glares at you with rage in his eyes. He wore the green uniforms you've seen around town, with a simple glistening helment. The guard, to your dismay, is baring a war hammer. To your shock, the guard strikes at you, but thanks to your swift thinking and lightning reflexes, you were able to block all the incoming strikes with your " + player.weapons + ' and ' + player.twoWeapons + '.');
@@ -237,7 +238,10 @@ function scene17Answer(answer){
    scene19();
  }
  if (answer = 'Enter'){
-   levelSelect();
+   if (End = true){
+     levelSelect();
+ }else{
+     $('#message').html('Nice try, try again.');
  }
 }
 
@@ -299,6 +303,7 @@ function scene18(){
               $('#question').html('Type Enter to go to Level Select');
           var freindlyCapture = true;
           injuredLeg = true;
+          var End = true;
         }
       }
     }
@@ -320,7 +325,11 @@ function scene18Answer(answer){
     scene22();
   }
   if (answer == 'Enter'){
+    if (End == true){
     levelSelect();
+    }else{
+      $('#message').html('Nice try, try again.');
+    }
   }
 }
 
