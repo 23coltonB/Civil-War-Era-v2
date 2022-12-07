@@ -51,6 +51,11 @@ var injured = false;
 var injuredLeg = false;
 //Level Point System//
 var LP = 0;
+/* Chapter truths*/
+var chapter2 = false;
+var chapter1_sidequest1 = false;
+var chapter1_sidequest2 = false;  
+var chapter1_sidequest3 = false;
 /*randomizer function*/
 var x = Math.random(100);
 /* Core functio to route to answer function */ 
