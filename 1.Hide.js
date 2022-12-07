@@ -72,7 +72,7 @@ $('#question').html('Are you sure? y or n');
 }
 
 function scene48Answer(answer){
-  if (answer != 'y' || 'n'){
+  if (answer != 'y' && answer != 'n'){
     $('#message').html('Please enter one of the given options.');
     return;
   }
@@ -149,7 +149,7 @@ function scene52(){
 }
 
 function scene52Answer(answer){
-    if (answer != 'y' || 'n'){
+    if (answer != 'y' && answer != 'n'){
     $('#message').html('Please enter one of the given options.');
     return;
   }
@@ -168,6 +168,7 @@ function scene53(){
   }else{
   $('#scenetext').html('Ugh! FINE! If you insist! You sprint at them, full speed, screaming, startling the guards. The guards jump at your sudden hostelness, and as you run at the guards full speed, without warning, however, the tallest one of them strikes you down, dead, on the ground. <br> "Why in all the Plains priviate!" Shouted the shorter guard to the taller guard. "We needed her alive!" The tall one just shrugged, and turned away, with the dwarf fumeing as he followed him outside. <br> <br> GAME OVER! <br> Game tip: If you ever fight anything without weapons, IRL or not, your odds of surviving are zero. Period.');
   }
+  $('#question').html('To restart the game, type "quitgame"');
 }
 
 function scene54(){

@@ -68,7 +68,7 @@ function scene31Answer(answer){
     scene32();
   }
   if (answer == 'sw'){
-    if (prepared == true || character == "MDA"){
+    if (prepared == true && player.character == "MDA"){
       scene33();
     }else{
       $('#message').html('That is not an action you can preform.');
@@ -357,7 +357,7 @@ currentScene = 36;
   if (enemy > 0){
     if (player.race != 'elf'){
       if (x <= player.accuracyM && x <= player.strength){
-        if (x == player.randomCrit){
+        if (x <= player.randomCrit){
           $('#scenetext').html('You ready yourself for the oncomeing onslaught. You effortlessly parry the first assailent with your ' + player.twoWeapons + ', strikeing down the second one with your' + player.weapons + ' and dodging the third. To your surpise, you ended up knocking out one of the assailents when you parried. Good for you.');
           enemy = Number(enemy) - 2;
           }else{
@@ -413,7 +413,7 @@ function scene37(){
 currentScene = 37;
     if (enemy > 0){
     if (x <= player.strength){
-      if (x == player.randomCrit){
+      if (x <= player.randomCrit){
         $('#scenetext').html('You stand your ground, and prepare to defend yourself from the three attackers. You effectivly parry all the attacks from your assailents. In fact, you hit them so hard, you knocked out one cold on the ground.');
         enemy = Number(enemy) - 1;
       }else{
@@ -447,7 +447,7 @@ function scene38(){
 currentScene = 38;
   if (enemy > 0){
     if (x <= player.magic && x <= player.accuracyR){
-      if (x == player.randomCrit){
+      if (x <= player.randomCrit){
         $('#scenetext').html('You throw your hands out towards the advancing assailent. With your staff, you slightly more powerfull than you are without it. <br> <br> "Fulgur Percutiens!" you shout despretly, hoping that it will work this time. Electrisity fills your veins, and a lightning bolt shoots out from your fingertips. It lands directly through one of the assailents, then, like a leaping rabbet, the bolt lept to the second one, shocking the secoond one as well.');
         enemy = Number(enemy) - 2;
       }else{
@@ -483,7 +483,7 @@ function scene39(){
   if (enemy > 0){
     if (player.race == 'elf'){
       if (x <= player.accuracyR){
-        if (x == player.randomCrit){
+        if (x <= player.randomCrit){
           $('#scenetext').html('You fire an arrow into the advanceing group. Luckly for you, it hits one of them. To your surpise, it ricochets off of the first assailent, and into the second one. Congrats.');
           enemy = Number(enemy) - 2;
         }else{
@@ -499,7 +499,7 @@ function scene39(){
       }
     }else{
           if (x <= player.accuracyM){
-        if (x == player.randomCrit){
+        if (x <= player.randomCrit){
           $('#scenetext').html('You charge head first into your assailents, screaming at them with your world renound battle cry. You effectivly use your ' + player.weapons + ' to incompacitate two of your assailents as you hop out of your assailents reach before they can effectivly hurt you. Congrats!');
           enemy = Number(enemy) - 2;
         }else{

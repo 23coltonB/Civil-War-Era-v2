@@ -79,9 +79,49 @@ function scene6(){
   $('#question').html('Please enter your character code.');
 }
 function scene6Answer(answer){
-  if (answer != "FEM" && answer != "MDA" && answer != "MHW" && answer != 'FDC' && answer != 'FDM' && answer != 'MES'){
+  if (answer != "FEM" && answer != "MDA" && answer != "MHW" && answer != 'FDC' && answer != 'FDM' && answer != 'MES' && answer != 'Stest' && answer != 'Ftest'){
     $('#message').html('Please enter the three character code.');
     return;
+  }
+    if (answer == 'Ftest'){
+    player.sex = 'male';
+    player.character = 'test';
+    player.race = 'human';
+    player.weapons = 'right hand';
+    player.twoWeapons = 'left hand';
+    player.stealth = 0;
+    player.speed = 0;
+    player.strength = 0;
+    player.accuracyR = 0;
+    player.accuracyM = 0;
+    player.dodge = 0;
+    player.randomCrit = 0;
+    player.charisma = 0;
+    player.perseption = 0;
+    player.wisdom = 0;
+    player.magic = 0;
+    player.armor = 0;
+    player.enemyE = 0;   
+  }
+      if (answer == 'Stest'){
+    player.sex = 'female';
+    player.character = 'test';
+    player.race = 'human';
+    player.weapons = 'right hand';
+    player.twoWeapons = 'left hand';
+    player.stealth = 100;
+    player.speed = 100;
+    player.strength = 100;
+    player.accuracyR = 100;
+    player.accuracyM = 100;
+    player.dodge = 100;
+    player.randomCrit = 100;
+    player.charisma = 100;
+    player.perseption = 100;
+    player.wisdom = 100;
+    player.magic = 100;
+    player.armor = 100;
+    player.enemyE = 100;   
   }
   if (answer == 'FEM'){
     player.sex = 'female';
@@ -95,7 +135,7 @@ function scene6Answer(answer){
     player.accuracyR = 50;
     player.accuracyM = 33;
     player.dodge = 35;
-    player.randomCrit = [5,4,3,2,1];
+    player.randomCrit = 5;
     player.charisma = 30;
     player.perseption = 55;
     player.wisdom = 30;
@@ -115,7 +155,7 @@ function scene6Answer(answer){
     player.accuracyR = 35;
     player.accuracyM = 50;
     player.dodge = 40;
-    player.randomCrit = [5,4,3,2,1];
+    player.randomCrit = 5;
     player.charisma = 55;
     player.perseption = 45;
     player.wisdom = 40;
@@ -134,7 +174,7 @@ function scene6Answer(answer){
     player.accuracyR = 65;
     player.accuracyM = 40;
     player.dodge = 35;
-    player.randomCrit = [5,4,3,2,1];
+    player.randomCrit = 5;
     player.charisma = 20;
     player.perseption = 65;
     player.wisdom = 30;
@@ -153,7 +193,7 @@ function scene6Answer(answer){
     player.accuracyR = 0;
     player.accuracyM = 60;
     player.dodge = 10;
-    player.randomCrit = [5,4,3,2,1];
+    player.randomCrit = 5;
     player.charisma = 60;
     player.perseption = 50;
     player.wisdom = 30;
@@ -172,7 +212,7 @@ function scene6Answer(answer){
     player.accuracyR = 35;
     player.accuracyM = 60;
     player.dodge = 50;
-    player.randomCrit = [5,4,3,2,1];
+    player.randomCrit = 5;
     player.charisma = 60;
     player.perseption = 50;
     player.wisdom = 40;
@@ -191,7 +231,7 @@ function scene6Answer(answer){
     player.accuracyR = 60;
     player.accuracyM = 10;
     player.dodge = 35;
-    player.randomCrit = [5,4,3,2,1];
+    player.randomCrit = 5;
     player.charisma = 20;
     player.perseption = 65;
     player.wisdom = 30;
