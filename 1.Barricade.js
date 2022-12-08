@@ -421,7 +421,7 @@ function scene22(){
   currentScene = 22;
   LP = Number(LP) + 10;
   if (nextToGuard == true){
-  $('#scenetext').html("This is a waist of time! He'll be fine.... probably. <br> You stand up, and swiftly make towards your door just as the giant apears from the kitchen. Without another word, you sprint out the door and into freedom <br> <br> Your current LP (Level Points) count is " + LP + "!");
+  $('#scenetext').html('"This is a waste of time! He' + will +' be fine.... probably." <br> You stand up, and swiftly make towards your door just as the giant apears from the kitchen. Without another word, you sprint out the door and into freedom <br> <br> Your current LP (Level Points) count is ' + LP + '!');
   }else{
   $('#scenetext').html("This is a waist of time! He'll be fine.... probably. <br> You swiftly make you're way to the exit just as the giant apears from the kitchen. Without another word, you sprint out the door and into freedom <br> <br> Your current LP (Level Points) count is " + LP + "!");
   }
