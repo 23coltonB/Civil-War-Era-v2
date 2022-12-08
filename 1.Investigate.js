@@ -358,11 +358,24 @@ currentScene = 36;
     if (player.race != 'elf'){
       if (x <= player.accuracyM && x <= player.strength){
         if (x >= player.randomCrit){
+          if (enemy != 1){
           $('#scenetext').html('You ready yourself for the oncomeing onslaught. You effortlessly parry the first assailent with your ' + player.twoWeapons + ', strikeing down the second one with your' + player.weapons + ' and dodging the third. To your surpise, you ended up knocking out one of the assailents when you parried. Good for you.');
           enemy = Number(enemy) - 2;
           }else{
-            $('#scenetext').html('You ready yourself for the oncomeing onslaught. You effortlessly parry the first assailent with your ' + player.twoWeapons + ', strikeing down the second one with your ' + player.weapons + ' and dodging the third.');
+            $('#scenetext').html('You ready yourself for the oncomeing onslaught. You  parry the last assailent with your ' + player.weapons + ', redirecting the bandits blade to fly into your wall. You just had that fixed! You think to yourself. With frustration, you knock out the assailent with your ' + player.twoWeapons + ' and he crumples to the floor.');
+          }
+          }else{
+          if (enemy == 2){
+            $('#scenetext').html('You ready yourself for the oncomeing onslaught. You effortlessly parry the first assailent with your ' + player.twoWeapons + ', strikeing down the second one with your ' + player.weapons + '.');
             enemy = Number(enemy) - 1;
+          }else{
+            if (enemy == 1){
+              $('#scenetext').html('You ready yourself for the oncomeing onslaught. The bandit swings at you with what appers to be a dagger, which you effortlessly parry  with your ' + player.weapons + ', and stabbing him in the side with your ' + player.twoWeapons + '.');
+              enemy = Number(enemy) - 1;
+            }else{
+                $('#scenetext').html('You ready yourself for the oncomeing onslaught. You effortlessly parry the first assailent with your ' + player.twoWeapons + ', strikeing down the second one with your ' + player.weapons + ' and dodging the third.');
+            enemy = Number(enemy) - 1;
+            }
           }
           $('#question').html("Press enter to continue.");
         }else{
