@@ -57,7 +57,12 @@ var chapter1_sidequest1 = false;
 var chapter1_sidequest2 = false;  
 var chapter1_sidequest3 = false;
 /*randomizer function*/
-var x = Math.random(100);
+function randomIntFromInterval(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min)
+}
+const rndInt = randomIntFromInterval(1, 100)
+var x = rndInt
+console.log(x)
 /* Core functio to route to answer function */ 
 function handleAnswer(answer) {
   console.log('Processing answer for scene: ' + currentScene);
