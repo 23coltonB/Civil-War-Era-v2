@@ -26,9 +26,11 @@ var not = "n't"
 var will = "'ll"
 var would = "'d"
 var have = "'ve"
+var stats = false;
 // Variables for Chapter 1
 //use functions scene25-29(); for any extra random functions that don't have anything to do with the other code. Or save them for when I want to work on further scenes on Barricade.js
 var enemy = 3;
+var scenex = 0;
 var demo = true;
 var weak = false;
 var trapSet = false;
@@ -61,13 +63,19 @@ function randomIntFromInterval(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min)
 }
 const rndInt = randomIntFromInterval(1, 100)
-var x = rndInt
-console.log(x)
+var x = rndInt;
 /* Core functio to route to answer function */ 
 function handleAnswer(answer) {
   console.log('Processing answer for scene: ' + currentScene);
   if (answer == 'quitgame') {
     scene1();
+    return;
+  }
+  if (answer == 'stats' || answer == "Stats"){
+   sceneX = currentScene + 150
+    stats = true;
+    stats1();
+    stats = false;
     return;
   }
   let sceneFunctionName = 'scene' + currentScene + 'Answer';

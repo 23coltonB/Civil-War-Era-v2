@@ -168,6 +168,7 @@ function scene6Answer(answer){
     player.character = 'MHW';
     player.race = 'human';
     player.weapons = 'magic staff';
+    player.twoWeapons = 'no secondary';
     player.stealth = 15;
     player.speed = 60;
     player.strength = 15;
@@ -187,6 +188,7 @@ function scene6Answer(answer){
     player.character = 'FDC';
     player.race = 'dwarf';
     player.weapons = 'war axe';
+    player.twoWeapons = 'no secondary';
     player.stealth = 5;
     player.speed = 25;
     player.strength = 60;
@@ -206,6 +208,7 @@ function scene6Answer(answer){
     player.character = 'FDM';
     player.race = 'dragonhalf';
     player.weapons = 'sword';
+    player.twoWeapons = 'no secondary';
     player.stealth = 50;
     player.speed = 55;
     player.strength = 65;
@@ -225,6 +228,7 @@ function scene6Answer(answer){
     player.character = 'MES';
     player.race = 'elf';
     player.weapons = 'crossbow';
+    player.twoWeapons = 'no secondary';
     player.stealth = 45;
     player.speed = 40;
     player.strength = 30;
