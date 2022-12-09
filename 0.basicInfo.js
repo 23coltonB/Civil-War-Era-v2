@@ -37,6 +37,7 @@ function scene2Answer(answer) {
 function scene3() {
   currentScene = 3;
   $('#question').html('Would you still like a quick refreasher as to how to play? y or n');
+LP = 0;
 }
 function scene3Answer(answer) {
   if (answer == 'n') {
