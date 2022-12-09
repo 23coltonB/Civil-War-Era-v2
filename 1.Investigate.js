@@ -428,6 +428,7 @@ function scene36Answer(answer){
   if (answer == ''){
     scene29(); 
   }
+    $('#message').html('');
 }
 
 function scene37(){
@@ -462,6 +463,7 @@ function scene37Answer(answer){
   if (answer == ''){
     scene29(); 
   }
+    $('#message').html('');
 }
 
 function scene38(){
@@ -497,6 +499,7 @@ function scene38Answer(answer){
     if (answer == ''){
     scene29(); 
   }
+    $('#message').html('');
 }
 
 function scene39(){
@@ -550,6 +553,7 @@ function scene39Answer(answer){
   if (answer == ''){
     scene29(); 
   }
+    $('#message').html('');
 }
 
 function scene40(){
@@ -675,6 +679,7 @@ function scene40Answer(answer){
   if (answer == 'Enter'){
     levelSelect();
   }
+    $('#message').html('');
 }
 
 function scene41(){
@@ -709,6 +714,7 @@ function scene41Answer(answer){
         ('#message').html('Nice try! Next time, choose the TRUE option.')
     }
   }
+    $('#message').html('');
 }
 
 function scene42(){
@@ -730,6 +736,7 @@ function scene42Answer(answer){
   if (answer == 'Enter'){
     levelSelect();
   }
+    $('#message').html('');
 }
 
 function scene43(){
@@ -750,6 +757,7 @@ function scene43Answer(answer){
   if (answer == 'Enter'){
     levelSelect();
   }
+    $('#message').html('');
 }
 
 function scene44(){
@@ -764,6 +772,7 @@ function scene44Answer(answer){
   if (answer == 'Enter'){
     levelSelect();
   }
+    $('#message').html('');
 }
 
 function scene45(){
@@ -789,6 +798,7 @@ function scene45Answer(answer){
     if (answer =='hide'){
       scene47();
     }
+    $('#message').html('');
 }
 
 function scene46(){
@@ -810,6 +820,7 @@ function scene46Answer(answer){
   if (answer == 'Enter'){
     levelSelect();
   }
+    $('#message').html('');
 }
 
 function scene47(){
@@ -829,6 +840,7 @@ function scene47Answer(answer){
   if (answer == 'Enter'){
     levelSelect();
   }
+    $('#message').html('');
 }
 
 function scene47a(){
@@ -842,6 +854,7 @@ function scene47aAnswer(answer){
   if (answer == 'Enter'){
     levelChoice();
   }
+    $('#message').html('');
 }
 
 function scene47Answer(answer){
@@ -855,4 +868,5 @@ function scene47Answer(answer){
   if (answer == 'n'){
     scene47a();
   }
+    $('#message').html('');
 }

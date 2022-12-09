@@ -28,4 +28,5 @@ function scene7Answer(answer) {
       scene11();
     }
   }
+    $('#message').html('');
 }

@@ -12,10 +12,10 @@ function scene1Answer(answer) {
   }
   else if (answer == 'y') {
     scene3();
-  }
-  else {
+  }else {
     $('#message').html('<strong>Please enter y or n.</strong>');
   }
+    $('#message').html('');
 }
 
 function scene2() {
@@ -32,6 +32,7 @@ function scene2Answer(answer) {
   else {
     $('#message').html('<strong>Please enter y or n.</strong>');
   }
+    $('#message').html('');
 }
 
 function scene3() {
@@ -49,6 +50,7 @@ function scene3Answer(answer) {
   else {
     $('#message').html('<strong>Please enter y or n.</strong>');
   }
+    $('#message').html('');
 }
 
 function scene4() {
@@ -244,5 +246,6 @@ function scene6Answer(answer){
     player.armor = 25;
     player.enemyE = 25;   
   }
-  scene7();
+    $('#message').html('');
+    scene7();
 }
