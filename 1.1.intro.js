@@ -13,17 +13,19 @@ function scene7Answer(answer) {
   if (answer != 'Hide' && answer != 'Investigate' && answer != 'Sleep' && answer != 'Barricade'){
     $('#message').html('Please enter one of the given options.');
     return;
-  }
-  if (answer == 'Hide'){
-    scene8();
-  }
-  if (answer == 'Sleep'){
-    scene9();
-  }
-  if (answer == 'Investigate'){
-    scene10();
-  }
-  if (answer == 'Barricade'){
-    scene11();
+  }else{
+    $('#message').html('')
+    if (answer == 'Hide'){
+      scene8();
+    }
+    if (answer == 'Sleep'){
+      scene9();
+    }
+    if (answer == 'Investigate'){
+      scene10();
+    }
+    if (answer == 'Barricade'){
+      scene11();
+    }
   }
 }

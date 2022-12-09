@@ -13,6 +13,7 @@ function scene10Answer(answer){
   }else{
   scene30();
   }
+  $('#message').html('');
 }
 
 function scene30(){
@@ -93,6 +94,7 @@ function scene31Answer(answer){
       $('#message').html('Nice try! Select one of the TRUE option!')
     }
   }
+  $('#message').html('');
 }
 
 function scene32(){
@@ -150,6 +152,7 @@ function scene28Answer(answer){
   if (answer == 'attack'){
     scene39();
   }
+  $('#message').html('');
 }
 
 function scene29(){
@@ -212,6 +215,7 @@ function scene29Answer(answer){
       ('#message').html('Nice try! Select one of the TRUE options!')
     }
   }
+  $('#message').html('');
 }
 
 function scene33(){
@@ -275,7 +279,8 @@ function scene33Answer(answer){
     if (answer == 'flee' || 'run'){
       scene42();
     }
-  }
+  $('#message').html('');
+}
 
 function scene34(){
   currentScene = 34;
@@ -313,6 +318,7 @@ function scene34Answer(answer){
         ('#message').html('Nice try! Next time, choose the TRUE option.')
       }
     }
+  $('#message').html('');
   }
 
 function scene35(){
@@ -350,6 +356,7 @@ function scene35Answer(answer){
         ('#message').html('Nice try! Next time, choose the TRUE option.')
     }
   }
+  $('#message').html('');
 }
 
 function scene36(){

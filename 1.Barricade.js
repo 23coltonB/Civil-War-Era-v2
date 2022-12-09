@@ -11,29 +11,31 @@ function scene11(){
 }
 
 function scene11Answer(answer) {
-  if (answer != 'hide' && answer != 'investigate' && answer != 'rts' && answer != 'ay' && answer && 'trap' && 'hide'){
+  if (answer != 'Hide' && answer != 'Investigate' && answer != 'Sleep' && answer != 'ay' && answer != 'trap' && answer != 'hide'){
     $('#message').html('Please enter one of the given options.');
     return;
-  }
-  if (weak == true){
-    if (answer == 'hide'){
-      scene8();
-    }
-    if (answer == 'rts'){
-      scene9();
-    }
-    if (answer == 'investigate'){
-      scene10();
-    }
   }else{
-    if (answer == 'hide'){
-      scene12();
-    }
-    if (answer == 'trap'){
-      scene13();
-    }
-    if (answer == 'ay'){
-      scene14();
+      $('#message').html('');
+    if (weak == true){
+      if (answer == 'hide'){
+        scene8();
+      }
+      if (answer == 'sleep'){
+        scene9();
+      }
+      if (answer == 'investigate'){
+        scene10();
+      }
+    }else{
+      if (answer == 'hide'){
+        scene12();
+      }
+      if (answer == 'trap'){
+        scene13();
+      }
+      if (answer == 'ay'){
+        scene14();
+      }
     }
   }
 }
@@ -119,6 +121,7 @@ function scene13Answer(answer){
     $('#message').html('What? What are you saying? Pick one of the options above');
     return;
   }
+  $('#message').html('');
 }
 
 function scene14(){
@@ -155,6 +158,7 @@ function scene14Answer(answer){
     $('#message').html('What? What are you saying? Pick one of the options above');
     return;
   }
+  $('#message').html('');
 }
 
 function scene15(){
@@ -172,6 +176,7 @@ function scene16(){
 
 function scene16Answer(answer){
   levelSelect();
+  $('#message').html('');
 }
 
 function scene17(){
@@ -229,16 +234,18 @@ function scene17Answer(answer){
  if (answer != 'GA' && answer != 'convince' && answer != 'Enter'){
    $('#message').html('Please select one of the options above');
     return;
- }
- if (answer == 'GA'){
-   scene18();
- }
- if (answer == 'convince'){
-   scene19();
- }
- if (answer = 'Enter'){
-   levelSelect();
- }
+ }else{
+     $('#message').html('');  
+     if (answer == 'GA'){
+       scene18();
+     }
+     if (answer == 'convince'){
+       scene19();
+     }
+     if (answer = 'Enter'){
+       levelSelect();
+     }
+   }
 }
 
 function scene18(){
@@ -309,19 +316,21 @@ function scene18Answer(answer){
   if (answer != 'WHU' && answer != 'THW' && answer != 'LH' && answer != 'Enter'){
     $('#message').html('Please select one of the options above');
     return;
-  }
-  if (answer == 'WHU'){
-    scene20();
-  }
-  if (answer == 'THW'){
-    scene21();
-  }
-  if (answer =='LH'){
-    scene22();
-  }
-  if (answer == 'Enter'){
-    levelSelect();
-  }
+  }else{
+    $('#message').html('');
+    if (answer == 'WHU'){
+      scene20();
+    }
+    if (answer == 'THW'){
+      scene21();
+    }
+    if (answer =='LH'){
+      scene22();
+    }
+    if (answer == 'Enter'){
+      levelSelect();
+    }
+  } 
 }
 
 function scene19(){
@@ -356,20 +365,22 @@ function scene19Answer(answer){
   if (answer != 'WHU' && answer != 'THW' && answer != 'LH' && answer != 'Enter'){
     $('#message').html('Please select one of the options above');
     return;
+  }else{
+    $('#message').html('');
+    if (answer == 'WHU'){
+      scene20();
+    }
+    if (answer == 'THW'){
+      scene21();
+    }
+    if (answer =='LH'){
+      scene22();
+    }
+    if (answer == 'Enter'){
+      levelSelect();
+    }
   }
-  if (answer == 'WHU'){
-    scene20();
-  }
-  if (answer == 'THW'){
-    scene21();
-  }
-  if (answer =='LH'){
-    scene22();
-  }
-  if (answer == 'Enter'){
-    levelSelect();
-  }
-}``
+}
 
 function scene20(){
   currentScene = 20;
@@ -381,12 +392,14 @@ function scene20Answer(answer){
   if (answer != 'y' && answer != 'n'){
     $('#message').html('Please select one of the options above');
     return;
-  }
-  if (answer == 'y'){
-    scene23();
-  }
-  if (answer == 'n'){
-    scene24();
+  }else{
+    $('#message').html('');
+    if (answer == 'y'){
+      scene23();
+    }
+    if (answer == 'n'){
+      scene24();
+    }
   }
 }
 
@@ -450,12 +463,14 @@ function scene23Answer(answer){
   if (answer != 'THW' && answer != 'LH'){
     $('#message').html('Please select one of the options above');
     return;
-  }
-  if (answer == 'THW'){
-    scene21();
-  }
-  if (answer =='LH'){
-    scene22();
+  }else{
+    $('#message').html('');
+    if (answer == 'THW'){
+      scene21();
+    }
+    if (answer =='LH'){
+      scene22();
+    }
   }
 }
 
@@ -469,11 +484,13 @@ function scene24Answer(answer){
   if (answer != 'THW' && answer != 'LH'){
     $('#message').html('Please select one of the options above');
     return;
-  }
-  if (answer == 'THW'){
-    scene21();
-  }
-  if (answer =='LH'){
-    scene22();
+  }else{
+    $('#message').html('');
+    if (answer == 'THW'){
+      scene21();
+    }
+    if (answer =='LH'){
+      scene22();
+    }
   }
 }

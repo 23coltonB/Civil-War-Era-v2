@@ -30,37 +30,39 @@ function scene8Answer(answer){
   if (answer != 'FIGHT' && answer != 'convince' && answer != 'SH' && answer != 'confront'){
     $('#message').html('Please enter one of the given options.');
     return;
-  }
-  if (answer == 'FIGHT'){
-    if (hidden == true){
-      $('#message').html('You are not in the position to do that.');
-    return;
-    }else{
-      scene48();
-    }
-  }
-  if (answer == 'convince'){
-    if (hidden == true){
-      $('#message').html('You are not in the position to do that.');
+  }else{
+    $('#message').html('');
+    if (answer == 'FIGHT'){
+      if (hidden == true){
+        $('#message').html('You are not in the position to do that.');
       return;
-    }else{
-      scene49();
+      }else{
+        scene48();
+      }
     }
-  }
-  if (answer == 'SH'){
-    if (hidden == false){
-      $('#message').html('You are not in the position to do that.');
-      return;
-    }else{
-      scene50();
+    if (answer == 'convince'){
+      if (hidden == true){
+        $('#message').html('You are not in the position to do that.');
+        return;
+      }else{
+        scene49();
+      }
     }
-  }
-  if (answer == 'confront'){
-    if (hidden == false){
-      $('#message').html('You are not in the position to do that.');
-      return;
-    }else{
-      scene51();
+    if (answer == 'SH'){
+      if (hidden == false){
+        $('#message').html('You are not in the position to do that.');
+        return;
+      }else{
+        scene50();
+      }
+    }
+    if (answer == 'confront'){
+      if (hidden == false){
+        $('#message').html('You are not in the position to do that.');
+        return;
+      }else{
+        scene51();
+      }
     }
   }
 }
@@ -82,6 +84,7 @@ function scene48Answer(answer){
   if (answer == 'n'){
     scene49();
   }
+  $('#message').html('');
 }
 
 function scene49(){
@@ -100,6 +103,7 @@ function scene49Answer(answer){
   if (answer == 'Enter'){
     levelSelect();
   }
+  $('#message').html('');
 }
 
 function scene50(){
@@ -114,6 +118,7 @@ function scene50Answer(answer){
     if (answer == 'Enter'){
     levelSelect();
   }
+  $('#message').html('');
 }
 
 function scene51(){
@@ -141,6 +146,7 @@ function scene51Answer(answer){
   if (answer == 'wait'){
     scene56();
   }
+  $('#message').html('');
 }
 
 function scene52(){
@@ -159,6 +165,7 @@ function scene52Answer(answer){
   if (answer == 'n'){
     scene49();
   }
+  $('#message').html('');
 }
 
 function scene53(){
@@ -187,6 +194,7 @@ function scene54Answer(answer){
     if (answer == 'Enter'){
     levelSelect();
   }
+  $('#message').html('');
 }
 
 function scene55(){
@@ -213,6 +221,7 @@ function scene55Answer(answer){
    if (answer == 'Enter'){
     levelSelect();
   }
+  $('#message').html('');
 }
 
 function scene55Answer(answer){
@@ -229,6 +238,7 @@ function scene55Answer(answer){
   if (answer == 'HHD'){
     scene59();
   }
+  $('#message').html('');
 }
 
 function scene56(){
@@ -302,8 +312,9 @@ function scene57Answer(answer){
   if (answer == 'Enter'){
       if (answer == 'Enter'){
     levelSelect();
+    }
   }
-  }
+  $('#message').html('');
 }
 
 function scene58(){
@@ -323,6 +334,7 @@ function scene58Answer(answer){
     if (answer == 'Enter'){
     levelSelect();
   }
+  $('#message').html('');
 }
 
 function scene59(){
@@ -356,6 +368,7 @@ function scene59Answer(answer){
   if (answer == 'Enter'){
     levelSelect();
   }
+  $('#message').html('');
 }
 
 function scene60(){
@@ -402,6 +415,7 @@ function scene62Answer(answer){
     if (answer == 'Enter'){
     levelSelect();
   }
+  $('#message').html('');
 }
 
 function scene63(){
@@ -416,6 +430,7 @@ function scene63Answer(answer){
     if (answer == 'Enter'){
     levelSelect();
   }
+  $('#message').html('');
 }
 
 function scene64(){
@@ -446,9 +461,9 @@ function scene64(){
     $('#scenetext').html('"Look man I... do' + not + ' want to hurt you..." You say with unconfidence. "Just tell me why are you here." The guard beneath you just laughs in your face. <br> "You' + will + ' get what you deseve soon enough." Suddenly something hard smacks you in the back of your head, effectively knocking you off the guard. Stars fill your vision, as you struggle to get up, but as your vision slowly fades to black, you see another figure hovering over the guard.<br> <br> Your current LP (Level Points) count is ' + LP + '!');
     }else{
       if (player.race == 'dragonhalf'){
-    $('#scenetext').html('"Look man I... do' + not + ' want to hurt you..." You say with unconfidence. "Just tell me why are you here." The guard beneath you just laughs in your face. <br> "You' + will + ' get what you deseve soon enough."  Suddenly something hard smacks you in the back of your head, effectively knocking you off the guard. Stars fill your vision, as you struggle to get up, but as your vision slowly fades to black, you see another figure hovering over the guard.<br> <br> Your current LP (Level Points) count is ' + LP + '!');
+    $('#scenetext').html('"Look man I... do' + not + ' want to hurt you..." You say with little confidence. "Just tell me why are you here." The guard beneath you just laughs in your face. <br> "You' + will + ' get what you deseve soon enough."  Suddenly something hard smacks you in the back of your head, effectively knocking you off the guard. Stars fill your vision, as you struggle to get up, but as your vision slowly fades to black, you see another figure hovering over the guard.<br> <br> Your current LP (Level Points) count is ' + LP + '!');
       }else{
-        $('#scenetext').html('"Look man I... do' + not + ' want to hurt you..." You say with unconfidence. "Just tell me why are you here." The guard beneath you just laughs in your face. <br> "You' + will + ' get what you deseve soon enough." Suddenly something hard smacks you in the back of your head, effectively knocking you off the guard. Stars fill your vision, as you struggle to get up, but as your vision slowly fades to black, you see another figure hovering over the guard.<br> <br> Your current LP (Level Points) count is ' + LP + '!');
+        $('#scenetext').html('"Look man I... do' + not + ' want to hurt you..." You say with little confidence. "Just tell me why are you here." The guard beneath you just laughs in your face. <br> "You' + will + ' get what you deseve soon enough." Suddenly something hard smacks you in the back of your head, effectively knocking you off the guard. Stars fill your vision, as you struggle to get up, but as your vision slowly fades to black, you see another figure hovering over the guard.<br> <br> Your current LP (Level Points) count is ' + LP + '!');
       }
     }
     var freindlyKnockout = true;
@@ -486,6 +501,7 @@ function scene64Answer(answer){
   if (answer == 'Enter'){
     levelSelect();
   }
+  $('#message').html('');
 }
 
 function scene65(){
@@ -524,6 +540,7 @@ function scene65Answer(answer){
     if (answer == 'Enter'){
     levelSelect();
   }
+  $('#message').html('');
 }
 
 function scene66(){
@@ -538,6 +555,7 @@ function scene66Answer(answer){
     if (answer == 'Enter'){
     levelSelect();
   }
+  $('#message').html('');
 }
 
 function scene67(){
@@ -577,6 +595,7 @@ function scene68Answer(answer){
   if (answer == 'Enter' && answer == ''){
     levelSelect();
   }
+  $('#message').html('');
 }
 
 function scene69(){
@@ -590,4 +609,5 @@ function scene69Answer(answer){
     if (answer == 'Enter' && answer == ''){
     levelSelect();
   }
+  $('#message').html('');
 }
