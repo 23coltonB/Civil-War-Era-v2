@@ -39,9 +39,3 @@ html, body{
   float: left;
   padding: 10px;
 }
-.column.middle {
-    width: 100%;
-  }
-.column.right {
-    width: 25%;
-  }
