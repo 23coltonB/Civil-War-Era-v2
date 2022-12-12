@@ -73,6 +73,8 @@ function scene5Answer(answer){
 }
 function scene6(){
   currentScene = 6;
+  document.getElementById("display").innerHTML = player;
+  alert(JSON.stringify(player));
   $('#scenetext').html('Welcome ' + player.name + '! <br> Please pick your character. <br> <br> Female Elf Marksmen (FEM),' + 
   '<br> Male Dragonhalf Assasain (MDA)' +
   '<br> Male Human Wizard (MHW)' + 
