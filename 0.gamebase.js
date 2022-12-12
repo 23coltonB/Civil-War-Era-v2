@@ -71,13 +71,6 @@ function handleAnswer(answer) {
     scene1();
     return;
   }
-  if (answer == 'stats' || answer == "Stats"){
-   sceneX = currentScene + 150
-    stats = true;
-    stats1();
-    stats = false;
-    return;
-  }
   let sceneFunctionName = 'scene' + currentScene + 'Answer';
   console.log('Calling function ' + sceneFunctionName + ' with answer: ' + answer);
   window[sceneFunctionName](answer);
