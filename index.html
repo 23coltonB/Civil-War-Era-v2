@@ -4,12 +4,27 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>repl.it</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+    
 <!--https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_grid-template-rows -->
   </head>
+<style>
+  .grid-container {
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+  gap: 2px;
+  padding: 25px;
+}
+
+.grid-container > div {
+  border: 1px solid black;
+  text-align: auto;
+}
+  </style>
   <body>
+    <div class="grid-container">
+      <div></div>
     <div id="wrap">
-      <div class="column.middle">
       <h2>Civil Era</h2>
       <div id="scenetext"></div>
       <div id="question"></div>
@@ -24,6 +39,36 @@
     <div id="stats">
         <div class="column.right"
         <h2>Stats</h2>
+      </div>
+      <p>
+        <h1>Your Stats are <br><span id="player"></span></h1>
+      </p>
+      <script>
+        let player = {
+          name:'N/A',
+          character: 'N/A',
+          race: 'N/A',
+          sex:'N/a',
+          health: 100,
+          weapons: 'N/A',
+          twoWeapons: 'N/A',
+          stealth: 0,
+          speed: 0,
+          strength: 0,
+          accuracyR: 0,
+          accuracyM: 0,
+          dodge: 0,
+          randomCrit: 0,
+          charisma: 0,
+          perseption: 0,
+          wisdom: 0,
+          magic: 0,
+          armor: 0,
+          enemyE: 0
+        };
+        document.getElementById("player").innerHTML = player;
+      </script>
+    </div>
     </div>
     <!-- scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>

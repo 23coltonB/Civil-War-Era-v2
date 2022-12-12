@@ -5,27 +5,29 @@ html, body{
 #wrap {
   min-width: 500px;
   max-width: 40%;
-  margin: balanced;
+  margin: auto;
 }
 #scenetext, #question, #questionAnswer {
   background: darkgray;
-  border: 1px solid #darkgray;
+  border: 1px solid lightgray;
   border-radius: 5px;
   padding: 5px;
   margin-bottom: 10px;
 }
 #scenetext img {
   max-width: 100%;
+  border: 1px solid lightgrey;
 }
 #question {
   background-color: aquamarine;
+  border: 1px solid lightgrey;
 }
 
 #questionAnswer {
   background-color: darkgreen;
+  border: 1px solid lightgrey;
 }
 #stats {
-  columns-count: 2;
   background: purple;
   border: 1px solid lightgrey;
   border-radius: 5px;
