@@ -2,10 +2,20 @@ html, body{
   background: black;
 }
 
+.grid-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.grid-container > div {
+  border: 1px solid black;
+  text-align: auto;
+}
+
 #wrap {
-  min-width: 500px;
-  max-width: 40%;
-  margin: auto;
+  flex: .85;
+  margin: 30px;
+  height: 200px;
 }
 #scenetext, #question, #questionAnswer {
   background: darkgray;
@@ -28,14 +38,16 @@ html, body{
   border: 1px solid lightgrey;
 }
 #stats {
+  div.relative{
+  position: relative;
+  bottom: 1; 
+}
+  flex: .15;
+  height: 89vh;
   background: purple;
   border: 1px solid lightgrey;
   border-radius: 5px;
   padding: 5px;
-  margin-bottom: 10px
-}
-
-.column {
-  float: left;
-  padding: 10px;
+  overflow: scroll;
+  overflowColor: #CBC3E3
 }

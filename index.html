@@ -5,86 +5,71 @@
     <meta name="viewport" content="width=device-width">
     <title>repl.it</title>
     <link href="style.css" rel="stylesheet" type="text/css"/>
-    
-<!--https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_grid-template-rows -->
   </head>
-<style>
-  .grid-container {
-  display: grid;
-  grid-template-columns: 25% 50% 25%;
-  gap: 2px;
-  padding: 25px;
-}
-
-.grid-container > div {
-  border: 1px solid black;
-  text-align: auto;
-}
-  </style>
   <body>
     <div class="grid-container">
-      <div></div>
-    <div id="wrap">
-      <h2>Civil Era</h2>
-      <div id="scenetext"></div>
-      <div id="question"></div>
-      <div id="questionAnswer">
-          <form id ="answerForm">
-          <input type="text" id="answer">
-          <button type="submit" id="answerButton">Go</button>
-          <div id="message"></div>
-          </form>
+      <div id="wrap">
+        <h2>Civil Era</h2>
+        <div id="scenetext"></div>
+        <div id="question"></div>
+        <div id="questionAnswer">
+            <form id ="answerForm">
+              <input type="text" id="answer">
+              <button type="submit" id="answerButton">Go</button>
+              <div id="message"></div>
+            </form>
+        </div>
       </div>
-   </div>
-    <div id="stats">
-        <div class="column.right">
+      <div id="stats">
+          <h2>Stats</h2>
+        <h4>Scroll to see more</h4>
+          <div id="statsContainer"></div>
+      </div>
     </div>
-     <h3>Stats</h3>
-      <div id="display"></div>
-      <script>
-player ={
-  name:'',
-  character: '',
-  race: '',
-  sex:'',
-  health: 100,
-  weapons: '',
-  twoWeapons: '',
-  stealth: 0,
-  speed: 0,
-  strength: 0,
-  accuracyR: 0,
-  accuracyM: 0,
-  dodge: 0,
-  randomCrit: 0,
-  charisma: 0,
-  perseption: 0,
-  wisdom: 0,
-  magic: 0,
-  armor: 0,
-  enemyE: 0
-  };
-  document.write('Name: '+ player.name + '<br> <br> Character ID: ' + player.character + '<br> <br> Race: ' +player.race +'<br> <br> Gender: '+player.sex +'<br> <br> Health: ' +player.health +'% <br> <br> Primary Weapon: ' + player.weapons + '<br> <br> Secondary Weapon: '+player.twoWeapons + '<br> <br> Stealth: ' + player.stealth + '% chance of successs <br> <br> Speed: ' +player.speed +'% chance of successs <br> <br> Ranged Accuarcy: ' +player.accuracyR + '% chance of successs <br> <br> Close ranged Accuracy: ' + player.accuracyM + '% chance of successs <br> <br> Dodge: ' + player.dodge +'% chance of successs <br> <br> Random Critical Hit:' +player.randomCrit +'% chance of successs <br> <br> Charisma: ' +player.charisma +'% chance of successs <br> <br> Wisdom: '+player.wisdom+'% chance of successs <br> <br> Magic accuacy: '+player.magic+'% chance of successs <br> <br> Armor Protection: ' +player.armor+'% chance of blocking damage <br> <br> Enemy Encounter: '+player.enemyE+'% chance of encountering an enemy.');
-</script>
-    </div>
-    </div>
-    <!-- scripts -->
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="0.basicInfo.js"></script>
-    <script src="0.gamebase.js"></script>
-    <script src="1.1.intro.js"></script>
-    <script src="1.Barricade.js"></script>
-    <script src="1.Hide.js"></script>
-    <script src="1.Investigate.js"></script>
-    <script src="1.ReturnToSleep.js"></script>
-    <script src="Level_Select.js"></script>
-    <script src="Stats_List.js"></script>
-    <script src ="2.Captured.js"></script>
-    <script src ="1.5.Escort.js"></script>
-    <script src ="1.5.Flee_OntoCapture.js"></script>
-    <script src ="1.5.CaptureByEnemyEscort.js"></script>
-    <script>
-      scene1(); // start with scene 1
-    </script>
   </body>
 </html>
+
+<!-- <script> I normally keep scripts at the bottom just to keep things organized</script> -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="0.basicInfo.js"></script>
+<script src="0.gamebase.js"></script>
+<script src="1.1.intro.js"></script>
+<script src="1.Barricade.js"></script>
+<script src="1.Hide.js"></script>
+<script src="1.Investigate.js"></script>
+<script src="1.ReturnToSleep.js"></script>
+<script src="Level_Select.js"></script>
+<script src ="2.Captured.js"></script>
+<script src ="1.5.Escort.js"></script>
+<script src ="1.5.Flee_OntoCapture.js"></script>
+<script src ="1.5.CaptureByEnemyEscort.js"></script>
+<script>
+  scene1();
+  player ={
+    name:'',
+    character: '',
+    race: '',
+    sex:'',
+    health: 100,
+    weapons: '',
+    secondary: '',
+    stealth: 0,
+    speed: 0,
+    strength: 0,
+    accuracyR: 0,
+    accuracyM: 0,
+    dodge: 0,
+    randomCrit: 0,
+    charisma: 0,
+    perseption: 0,
+    wisdom: 0,
+    magic: 0,
+    armor: 0,
+    enemyE: 0
+  };
+  updateStats();
+  function updateStats(){
+    // This just loads all the stats in the "statsContainer" div
+    document.getElementById("statsContainer").innerHTML = 'Name: '+         player.name + '<br> <br> Character ID: ' + player.character +         '<br> <br> Race: ' +player.race +'<br> <br> Gender: ' + player.sex       +'<br> <br> Current Level Points: ' + LP + '<br> <br> Health: ' +player.health +'% <br> <br> Primary Weapon:     ' + player.weapons + '<br> <br> Secondary Weapon:                       '+player.secondary + '<br> <br> Stealth: ' + player.stealth + '%      chance of success <br> <br> Speed: ' +player.speed +'% chance of     success <br> <br> Ranged Accuarcy: ' +player.accuracyR + '%           chance of success <br> <br> Close ranged Accuracy: ' +                 player.accuracyM + '% chance of success <br> <br> Dodge: ' +          player.dodge +'% chance of success <br> <br> Random Critical         Hit: ' +player.randomCrit +'% chance of success <br> <br> Strength: ' + player.strength +'% chance of success <br> <br>              Charisma: ' +player.charisma +'% chance of success <br> <br>          Wisdom: '+player.wisdom+'% chance of success <br> <br> Magic          accuacy: '+player.magic+'% chance of success <br> <br> Armor          Protection: ' +player.armor+'% chance of blocking damage <br> <br>     Enemy Encounter: '+player.enemyE+'% chance of encountering an          enemy.';
+  }
+</script>

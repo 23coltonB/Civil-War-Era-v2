@@ -1,9 +1,31 @@
-
 /* functions for basic info */
 
 function scene1() {
+  player ={
+    name:'',
+    character: '',
+    race: '',
+    sex:'',
+    health: 100,
+    weapons: '',
+    secondary: '',
+    stealth: 0,
+    speed: 0,
+    strength: 0,
+    accuracyR: 0,
+    accuracyM: 0,
+    dodge: 0,
+    randomCrit: 0,
+    charisma: 0,
+    perseption: 0,
+    wisdom: 0,
+    magic: 0,
+    armor: 0,
+    enemyE: 0
+  };
+  updateStats();
   currentScene = 1;
-  $('#scenetext').html('<h1>Welcome to Civil Era</h1><img src="images/scene1.jpg">');
+  $('#scenetext').html('<h1>The Second Civil Era</h1><img src="images/scene1.jpg">');
   $('#question').html('Have you played this before? y or n');
 }
 function scene1Answer(answer) {
@@ -68,19 +90,24 @@ function scene5() {
   $('#question').html('What would you like to be called?');
 }
 function scene5Answer(answer){
+  if (answer == '' || answer == ' '){
+    $('#message').html('Please type a name you would like to be called.');
+    return;
+  }else{
   player.name = answer;
   scene6();
+    $('#message').html('');
+  }
 }
 function scene6(){
   currentScene = 6;
-  document.getElementById("display").innerHTML = player;
-  alert(JSON.stringify(player));
+  updateStats();
   $('#scenetext').html('Welcome ' + player.name + '! <br> Please pick your character. <br> <br> Female Elf Marksmen (FEM),' + 
   '<br> Male Dragonhalf Assasain (MDA)' +
   '<br> Male Human Wizard (MHW)' + 
   '<br>Female Dwarf Crusader (FDC)' + 
   '<br> Female Dragonhalf Mercenary (FDM)' +
-  '<br> Male Elf Sniper (MES)');
+  '<br> Male Elf Sharpshooter (MES)');
   $('#question').html('Please enter your character code.');
 }
 function scene6Answer(answer){
@@ -93,7 +120,7 @@ function scene6Answer(answer){
     player.character = 'test';
     player.race = 'human';
     player.weapons = 'right hand';
-    player.twoWeapons = 'left hand';
+    player.secondary = 'left hand';
     player.stealth = 0;
     player.speed = 0;
     player.strength = 0;
@@ -106,14 +133,14 @@ function scene6Answer(answer){
     player.wisdom = 0;
     player.magic = 0;
     player.armor = 0;
-    player.enemyE = 0;   
+    player.enemyE = -50;   
   }
       if (answer == 'Stest'){
     player.sex = 'female';
     player.character = 'test';
     player.race = 'human';
     player.weapons = 'right hand';
-    player.twoWeapons = 'left hand';
+    player.secondary = 'left hand';
     player.stealth = 100;
     player.speed = 100;
     player.strength = 100;
@@ -133,7 +160,7 @@ function scene6Answer(answer){
     player.character = 'FEM';
     player.race = 'elf';
     player.weapons = 'bow';
-    player.twoWeapons = 'knife';
+    player.secondary = 'knife';
     player.stealth = 40;
     player.speed = 50;
     player.strength = 35;
@@ -153,7 +180,7 @@ function scene6Answer(answer){
     player.character= 'MDA';
     player.race = 'Dragonhalf';
     player.weapons = 'rapier';
-    player.twoWeapons = 'parrying dagger';
+    player.secondary = 'parrying dagger';
     player.stealth = 50;
     player.speed = 55;
     player.strength = 65;
@@ -173,7 +200,7 @@ function scene6Answer(answer){
     player.character = 'MHW';
     player.race = 'human';
     player.weapons = 'magic staff';
-    player.twoWeapons = 'no secondary';
+    player.secondary = 'no secondary';
     player.stealth = 15;
     player.speed = 60;
     player.strength = 15;
@@ -186,14 +213,14 @@ function scene6Answer(answer){
     player.wisdom = 40;
     player.magic = 50;
     player.armor = 15;
-    player.enemyE = 20;   
+    player.enemyE = 10;   
   }
     if (answer == 'FDC'){
     player.sex = 'female';
     player.character = 'FDC';
     player.race = 'dwarf';
     player.weapons = 'war axe';
-    player.twoWeapons = 'no secondary';
+    player.secondary = 'great sheild';
     player.stealth = 5;
     player.speed = 25;
     player.strength = 60;
@@ -213,7 +240,7 @@ function scene6Answer(answer){
     player.character = 'FDM';
     player.race = 'dragonhalf';
     player.weapons = 'sword';
-    player.twoWeapons = 'no secondary';
+    player.secondary = 'no secondary';
     player.stealth = 50;
     player.speed = 55;
     player.strength = 65;
@@ -233,7 +260,7 @@ function scene6Answer(answer){
     player.character = 'MES';
     player.race = 'elf';
     player.weapons = 'crossbow';
-    player.twoWeapons = 'no secondary';
+    player.secondary = 'no secondary';
     player.stealth = 45;
     player.speed = 40;
     player.strength = 30;
@@ -246,8 +273,9 @@ function scene6Answer(answer){
     player.wisdom = 40;
     player.magic = 0;
     player.armor = 25;
-    player.enemyE = 25;   
+    player.enemyE = 50;   
   }
+  updateStats();
     $('#message').html('');
     scene7();
 }

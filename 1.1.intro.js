@@ -1,7 +1,7 @@
 /* functions for part one of chapter 1 */
 function scene7() {
-  document.getElementById("display").innerHTML = player;
-  alert(JSON.stringify(player));
+  // document.getElementById("display").innerHTML = player;
+  updateStats();
   currentScene = 7;
   if (x <= player.perseption){
     $('#scenetext').html('You jolt awake at a small noise that echos thow the halls, it sounds like someone dropped something matalic, and footsteps approaching you.');
