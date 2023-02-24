@@ -77,7 +77,7 @@ function scene3Answer(answer) {
 
 function scene4() {
   currentScene = 4;
-  $('#scenetext').html('This is a simple game where you type what actions you would like to do, in the action bar. There will be several timelines you can go through. There is about [insert number here] timelines you can go through. There is currently no save option, so try to play to the end until I can see if I can get one in later updates. There are six characters you can choose from, each one with specialties with different stats, [Stealth, melee, ranged, dodge, charisma, magic, perseption, wisdom, health, and armor], like for example, the MDA, or the Male Dragonhalf Assasain, has a specialty stat for charisma, and stealth, while FEM, or Female Elf Marksmen, has a specialty stat of range attacks and perseption. Later in the game, you will be able to see these stats by printing \'stats\' when prompted. Also, you may be able to train stats later in the game, to increase your stats. Thats basiclly it. Thank you for playing and have fun!<br /><br />- Colton Bennett, Developer<br /><img src="images/colton-bennett.jpg" />');
+  $('#scenetext').html('This is a simple game where you type what actions you would like to do, in the action bar. There will be several timelines you can go through. There is about [insert number here] timelines you can go through. There is currently no save option, so try to play to the end until I can see if I can get one in later updates. There are six characters you can choose from, each one with specialties with different stats, [Stealth, melee, ranged, dodge, charisma, magic, perseption, wisdom, health, and armor], like for example, the MDA, or the Male Dragonhalf Assasain, has a specialty stat for charisma, and stealth, while FEM, or Female Elf Marksmen, has a specialty stat of range attacks and perseption. Later in the game, you will be able to see these stats by printing \'stats\' when prompted. Also, you may be able to train stats later in the game, to increase your stats. Thats basiclly it. Thank you for playing and have fun!<br /><br />- Colton Bennett, Developer, Idiot<br /><img src="images/colton-bennett.jpg" />');
   $('#question').html('Click button to continue.');
 }
 function scene4Answer(answer) {
@@ -99,6 +99,7 @@ function scene5Answer(answer){
     $('#message').html('');
   }
 }
+
 function scene6(){
   currentScene = 6;
   updateStats();
@@ -141,19 +142,19 @@ function scene6Answer(answer){
     player.race = 'human';
     player.weapons = 'right hand';
     player.secondary = 'left hand';
-    player.stealth = 100;
-    player.speed = 100;
-    player.strength = 100;
-    player.accuracyR = 100;
-    player.accuracyM = 100;
-    player.dodge = 100;
-    player.randomCrit = 100;
-    player.charisma = 100;
-    player.perseption = 100;
-    player.wisdom = 100;
-    player.magic = 100;
-    player.armor = 100;
-    player.enemyE = 100;   
+    player.stealth = 150;
+    player.speed = 150;
+    player.strength = 150;
+    player.accuracyR = 150;
+    player.accuracyM = 150;
+    player.dodge = 150;
+    player.randomCrit = 150;
+    player.charisma = 150;
+    player.perseption = 150;
+    player.wisdom = 150;
+    player.magic = 150;
+    player.armor = 150;
+    player.enemyE = 10;   
   }
   if (answer == 'FEM'){
     player.sex = 'female';

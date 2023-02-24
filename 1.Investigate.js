@@ -32,7 +32,7 @@ function scene30(){
 }
 
 function scene30Answer(answer){
-    levelSelect();
+    levelSelect0();
 }
 
 function scene31(){
@@ -78,7 +78,7 @@ if (answer != 'Flee' && answer != 'Chapter 2' && answer != 'Escort' && answer !=
   }
   if (answer == 'Enter'){
     if (End == true){
-    levelSelect();
+    levelSelect0();
     }else{
       $('#message').html('Nice try! Select one of the TRUE option!')
     }
@@ -163,7 +163,7 @@ function scene32(){
         }
       if (answer == 'Enter'){
         if (End == true){
-        levelSelect();
+        levelSelect0();
         }
       }
     }else{
@@ -298,7 +298,7 @@ function scene29Answer(answer){
     }
     if (answer == 'Enter'){
       if (End == true){
-      levelSelect();
+      levelSelect0();
       }else{
         ('#message').html('Nice try! Select one of the TRUE options!')
       }
@@ -423,7 +423,7 @@ function scene34Answer(answer){
   if (answer != 'Flee' && answer != 'Chapter 2' && answer != 'Escort' && answer != 'Captured'){
       if (answer == 'Enter'){
       if (End == True){
-          levelSelect();
+          levelSelect0();
         }else{
           ('#message').html('Nice try! Next time, choose the TRUE option.')
         }
@@ -503,7 +503,7 @@ function scene35Answer(answer){
     }
     if (answer == 'Enter'){
         if (End == True){
-          levelSelect();
+          levelSelect0();
         }else{
           ('#message').html('Nice try! Next time, choose the TRUE option.')
       }
@@ -604,7 +604,7 @@ currentScene = 36;
 function scene36Answer(answer){
   if (answer == 'Enter'){
     if (End == True){
-        levelSelect();
+        levelSelect0();
       }else{
         ('#message').html('Nice try! Next time, choose the TRUE option.')
     }
@@ -640,7 +640,7 @@ currentScene = 37;
 function scene37Answer(answer){
   if (answer == 'Enter'){
     if (End == True){
-        levelSelect();
+        levelSelect0();
       }else{
         ('#message').html('Nice try! Next time, choose the TRUE option.')
     }
@@ -677,7 +677,7 @@ currentScene = 38;
 function scene38Answer(answer){
   if (answer == 'Enter'){
   if (End == True){
-        levelSelect();
+        levelSelect0();
       }else{
         ('#message').html('Nice try! Next time, choose the TRUE option.')
     }
@@ -758,7 +758,7 @@ function scene39(){
 function scene39Answer(answer){
   if (answer == 'Enter'){
     if (End == True){
-        levelSelect();
+        levelSelect0();
       }else{
         ('#message').html('Nice try! Next time, choose the TRUE option.')
     }
@@ -907,7 +907,7 @@ function scene40(){
 }
 
 function scene40Answer(answer){
-    levelSelect();
+    levelSelect0();
     $('#message').html('');
 }
 
@@ -940,7 +940,7 @@ function scene41Answer(answer){
     }
     if (answer == 'Enter'){
       if (End == True){
-          levelSelect();
+          levelSelect0();
         }else{
           ('#message').html('Nice try! Next time, choose the TRUE option.')
       }
@@ -995,7 +995,7 @@ function scene42(){
 }
 
 function scene42Answer(answer){
-    levelSelect();
+    levelSelect0();
     $('#message').html('');
 }
 
@@ -1015,7 +1015,7 @@ function scene43(){
 }
 
 function scene43Answer(answer){
-    levelSelect();
+    levelSelect0();
     $('#message').html('');
 }
 
@@ -1029,7 +1029,7 @@ function scene44(){
 }
 
 function scene44Answer(answer){
-    levelSelect();
+    levelSelect0();
     $('#message').html('');
 }
 
@@ -1068,7 +1068,7 @@ function scene46(){
 }
 
 function scene46Answer(answer){
-    levelSelect();
+    levelSelect0();
     $('#message').html('');
 }
 
@@ -1087,7 +1087,7 @@ function scene47(){
 }
 
 function scene47Answer(answer){
-    levelSelect();
+    levelSelect0();
     $('#message').html('');
 }
 
@@ -1100,7 +1100,7 @@ function scene47a(){
    var enemyCapture = true;
 }
 function scene47aAnswer(answer){
-    levelSelect();
+    levelSelect0();
     $('#message').html('');
 }
 

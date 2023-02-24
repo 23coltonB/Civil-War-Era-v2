@@ -16,5 +16,5 @@ function scene9(){
 }
   
 function scene9Answer(answer){
-    levelSelect();
+    levelSelect300();
 }

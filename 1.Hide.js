@@ -107,7 +107,7 @@ function scene49(){
   var communication = true; 
 } 
 function scene49Answer(answer){  
-    levelSelect();  
+    levelSelect300();  
   $('#message').html(''); 
 } 
 function scene50(){ 
@@ -119,7 +119,7 @@ function scene50(){
   sleep = true; 
 } 
 function scene50Answer(answer){ 
-    levelSelect(); 
+    levelSelect300(); 
   $('#message').html(''); 
 } 
 function scene51(){ 
@@ -186,7 +186,7 @@ function scene54(){
   $('#question').html('Type Enter to go to Level Select'); 
 } 
 function scene54Answer(answer){ 
-    levelSelect(); 
+    levelSelect300(); 
   $('#message').html(''); 
 } 
 function scene55(){ 
@@ -210,7 +210,7 @@ function scene55(){
   } 
 } 
 function scene55Answer(answer){ 
-    levelSelect();  
+    levelSelect300();  
   $('#message').html(''); 
 } 
 function scene55Answer(answer){ 
@@ -299,7 +299,7 @@ function scene57Answer(answer){
         scene61(); 
       } 
       if (answer == 'Enter'){ 
-          levelSelect(); 
+          levelSelect300(); 
       $('#message').html(''); 
     }
   }else{
@@ -347,7 +347,7 @@ function scene58(){
   var freindlyCapture = true; 
 } 
 function scene58Answer(answer){  
-    levelSelect(); 
+    levelSelect300(); 
   $('#message').html(''); 
 } 
 function scene59(){ 
@@ -382,7 +382,7 @@ function scene59Answer(answer){
     } 
     if (answer != 'Enter'){ 
       if (End == true){ 
-        levelSelect(); 
+        levelSelect300(); 
       }else{ 
         $('#message').html('Nice try, try using one of the real options.'); 
       } 
@@ -461,7 +461,7 @@ function scene62(){
   } 
 } 
 function scene62Answer(answer){ 
-    levelSelect(); 
+    levelSelect300(); 
   $('#message').html(''); 
 } 
 function scene63(){ 
@@ -473,7 +473,7 @@ function scene63(){
   $('#question').html('Type Enter to go to Level Select'); 
 }
 function scene63Answer(answer){ 
-    levelSelect(); 
+    levelSelect300(); 
   $('#message').html(''); 
 } 
 function scene64(){ 
@@ -544,7 +544,7 @@ function scene64Answer(answer){
       scene68(); 
     } 
     if (answer == 'Enter'){ 
-      levelSelect(); 
+      levelSelect300(); 
     }
 }else{
 	     if (answer === 'Escort'){
@@ -611,7 +611,7 @@ function scene65(){
   $('#question').html('Type Enter to go to Level Select'); 
 } 
 function scene65Answer(answer){  
-    levelSelect(); 
+    levelSelect300(); 
   $('#message').html(''); 
 } 
 function scene66(){ 
@@ -623,7 +623,7 @@ function scene66(){
   $('#question').html('Type Enter to go to Level Select'); 
 } 
 function scene66Answer(answer){  
-    levelSelect();
+    levelSelect300();
   $('#message').html(''); 
 } 
 function scene67(){ 
@@ -658,7 +658,7 @@ function scene68(){
   $('#question').html('Type Enter to go to Level Select'); 
 } 
 function scene68Answer(answer){ 
-    levelSelect(); 
+    levelSelect300(); 
 } 
 function scene69(){ 
   currentScene = 69; 
@@ -669,5 +669,5 @@ function scene69(){
   var freindlyCaptrue= true;
 } 
 function scene69Answer(answer){ 
-    levelSelect(); 
+    levelSelect300(); 
 }

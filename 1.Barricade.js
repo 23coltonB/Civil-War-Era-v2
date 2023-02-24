@@ -312,7 +312,7 @@ function scene17(){
             updateStats();
         $('#question').html('Type Enter to go to Level Select');
           injured = true;
-        var knockout = truel
+        var knockout = true;
         var freindlyCapture = true;
       }else{
         LP = Number(LP) + 10;
@@ -327,13 +327,13 @@ function scene17(){
       if (x <= player.dodge && x <= player.speed || x <= player.dodge && x <= player.speed){
         LP = Number(LP) + 13;
         updateStats();
-        $('#scenetext').html('The giant guard attempts to crush you once again with his war hammer, but you are able to succsesfully dive out of the way before he can crush you. You roll into the kitchen, periodicly dodging the guards hammer strikes. The dwarven guard stutters as he tries to get the other guards attetion, but the anger in the giants eyes seemed unfazed. As you dodge, you notice that as the hammer strikes your floor, as the weight of the hammer strikes the floor leaves splinter and depressions where the hammer missed you. Thats going to be expensive to replace, you say to yourself. You sprint past tall guard when he attempts to strike you, rushing past the dwarf who didn' +not +' seem to notice you rushing past, and into the next room, and out into safty');
+        $('#scenetext').html('The giant guard attempts to crush you once again with his war hammer, but you are able to succsesfully dive out of the way before he can crush you. You roll into the kitchen, periodicly dodging the guards hammer strikes. The dwarven guard stutters as he tries to get the other guards attetion, but the anger in the giants eyes seemed unfazed. As you dodge, you notice that as the hammer strikes your floor, as the weight of the hammer strikes the floor leaves splinter and depressions where the hammer missed you. Thats going to be expensive to replace, you say to yourself. You sprint past tall guard when he attempts to strike you, rushing past the dwarf who did' + not +' seem to notice you rushing past, and into the next room, and out into safty');
         $('#question').html('Type "Enter" to go to Level Select');
           var freindlyChase = true;
       }else{
         LP = Number(LP) + 10;
         $('#scenetext').html('You try to dive out of the way of the falling hammer, but quite not fast enough. The hammer, unfortinatly for you, lands right on your leg with a stomach sickening crunch. You cry out in pain, and try to get crawl away. The dwarven guard cried out in terror. <br> <br> Your current LP (Level Points) count is ' + LP + '!');
-        player.health  Number(player.health) - 75;
+        player.health = Number(player.health) - 75;
         updateStats();
         $('#question').html('Type Enter to go to Level Select');
         injuredLeg = true;
