@@ -204,7 +204,7 @@ function scene15(){
 }
 
 function scene15Answer(){
-  levelSelect();
+  levelSelect300();
   $('#message').html('');
 }
 
@@ -280,7 +280,7 @@ function scene16Answer(answer){
     $('#message').html('');
     if (End == true){
       if (answer == 'Enter'){
-        levelSelect();
+        levelSelect300();
       }
     }else if (answer == 'GA'){
       scene17();
@@ -398,7 +398,7 @@ function scene17Answer(answer){
       scene21();
     }else if (End == true){
       if (answer == 'Enter'){
-        levelSelect();
+        levelSelect300();
       }
     }else{
       $('#message').html('That is' +not + 'an option');
@@ -463,7 +463,7 @@ function scene18Answer(answer){
       scene21();
     }else if (End == true){
       if (answer == Enter){
-        levelSelect();
+        levelSelect300();
       }
     }else{
       $('#message').html('That is' + not + ' an option');
@@ -518,7 +518,7 @@ function scene20(){
 }
 
 function scene21Answer(answer){
-  levelSelect();
+  levelSelect300();
 }
 
 //NO!
@@ -539,7 +539,7 @@ function scene21(){
 }
 
 function scene21Answer(answer){
-  levelSelect();
+  levelSelect300();
 }
 
 //Checking Pulse....

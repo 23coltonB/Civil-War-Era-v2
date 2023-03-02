@@ -41,7 +41,7 @@ function scene82(){
 }
 
 function scene82Answer(answer){
-  levelSelect();
+  levelSelect300();
 }
 
 // eat
@@ -205,7 +205,7 @@ function scene88(){
 }
 
 function scene88Answer(answer){
-  levelSelect();
+  levelSelect300();
 }
 
 //Escape!
@@ -218,5 +218,5 @@ function scene89(){
 }
 
 function scene89Answer(answer){
-  levelSelect();
+  levelSelect300();
 }
