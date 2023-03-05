@@ -8,16 +8,36 @@
   </head>
   <body>
     <div class="grid-container">
+      <div id="buttonContainer">
+    <!-- buttons will be added dynamically here -->
+  </div>
+      <script>
+    /// your list of options and their corresponding game functions
+var options = [  { text: 'Option A', func: gameFunctionOptionA },  { text: 'Option B', func: gameFunctionOptionB },  { text: 'Option C', func: gameFunctionOptionC }];
+
+// function to handle button clicks
+function handleButtonClick(optionFunc) {
+  optionFunc(); // call the corresponding game function
+}
+
+// create the buttons dynamically
+var buttonContainer = document.getElementById('button-container');
+for (var i = 0; i < options.length; i++) {
+  var button = document.createElement('button');
+  button.innerText = options[i].text;
+  button.onclick = (function(optionFunc) {
+    return function() {
+      handleButtonClick(optionFunc);
+    };
+  })(options[i].func);
+  buttonContainer.appendChild(button);
+}
+   </script>
       <div id="wrap">
         <h2>Civil Era</h2>
         <div id="scenetext"></div>
         <div id="question"></div>
         <div id="questionAnswer">
-            <form id ="answerForm">
-              <input type="text" id="answer">
-              <button type="submit" id="answerButton">Go</button>
-              <div id="message"></div>
-            </form>
         </div>
       </div>
       <div id="stats">
@@ -33,6 +53,7 @@
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="0.basicInfo.js"></script>
 <script src="0.gamebase.js"></script>
+<script src="0.SceneQuestions.js"></script>
 <script src="1.1.intro.js"></script>
 <script src="1.Barricade.js"></script>
 <script src="1.Hide.js"></script>
@@ -46,7 +67,7 @@
 <script>
   scene1();
   player ={
-    name:'',
+    name:'none',
     character: '',
     race: '',
     sex:'',

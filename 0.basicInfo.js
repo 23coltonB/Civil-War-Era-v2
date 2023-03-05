@@ -25,98 +25,76 @@ function scene1() {
   };
   updateStats();
   currentScene = 1;
+  scene1Question();
   $('#scenetext').html('<h1>The Second Civil Era</h1><img src="images/scene1.jpg">');
   $('#question').html('Have you played this before? y or n');
 }
-function scene1Answer(answer) {
-  if (answer == 'n') {
-    scene2();
+
+function scene1Answer(options) {
+  switch (options) {
+    case 'Yes':
+      // call the game function for Option A
+      scene2();
+      break;
+    case 'No':
+      scene3();
+      break;
   }
-  else if (answer == 'y') {
-    scene3();
-  }else {
-    $('#message').html('<strong>Please enter y or n.</strong>');
-  }
-    $('#message').html('');
 }
+
 
 function scene2() {
   currentScene = 2;
-  $('#question').html('Would you like to know how to play before you start? y or n');
+  scene2Question();
+  $('#question').html('Would you like a quick refresher as to how to play? y or n');
 }
-function scene2Answer(answer) {
-  if (answer == 'n') {
-    scene5();
+
+function scene2Answer(options) {
+  switch (options) {
+    case 'Yes':
+      // call the game function for Option A
+      scene3();
+      break;
+    case 'No':
+      scene4();
+      break;
   }
-  else if (answer == 'y') {
-    scene4();
-  }
-  else {
-    $('#message').html('<strong>Please enter y or n.</strong>');
-  }
-    $('#message').html('');
 }
 
 function scene3() {
   currentScene = 3;
-  $('#question').html('Would you still like a quick refreasher as to how to play? y or n');
-LP = 0;
-}
-function scene3Answer(answer) {
-  if (answer == 'n') {
-    scene5();
-  }
-  else if (answer == 'y') {
-    scene4();
-  }
-  else {
-    $('#message').html('<strong>Please enter y or n.</strong>');
-  }
-    $('#message').html('');
-}
-
-function scene4() {
-  currentScene = 4;
+  scene3Question();
   $('#scenetext').html('This is a simple game where you type what actions you would like to do, in the action bar. There will be several timelines you can go through. There is about [insert number here] timelines you can go through. There is currently no save option, so try to play to the end until I can see if I can get one in later updates. There are six characters you can choose from, each one with specialties with different stats, [Stealth, melee, ranged, dodge, charisma, magic, perseption, wisdom, health, and armor], like for example, the MDA, or the Male Dragonhalf Assasain, has a specialty stat for charisma, and stealth, while FEM, or Female Elf Marksmen, has a specialty stat of range attacks and perseption. Later in the game, you will be able to see these stats by printing \'stats\' when prompted. Also, you may be able to train stats later in the game, to increase your stats. Thats basiclly it. Thank you for playing and have fun!<br /><br />- Colton Bennett, Developer, Idiot<br /><img src="images/colton-bennett.jpg" />');
   $('#question').html('Click button to continue.');
 }
-function scene4Answer(answer) {
-  scene5();
-}
 
-function scene5() {
-  currentScene = 5;
-  $('#scenetext').html('Please specify the name of your character.');
-  $('#question').html('What would you like to be called?');
-}
-function scene5Answer(answer){
-  if (answer == '' || answer == ' '){
-    $('#message').html('Please type a name you would like to be called.');
-    return;
-  }else{
-  player.name = answer;
-  scene6();
-    $('#message').html('');
+function scene3Answer(options) {
+  switch (options) {
+  case 'Go':
+    // call the game function for Option A
+    scene4();
+    break;
   }
 }
 
-function scene6(){
-  currentScene = 6;
+function scene4(){
+  currentScene = 4;
   updateStats();
-  $('#scenetext').html('Welcome ' + player.name + '! <br> Please pick your character. <br> <br> Female Elf Marksmen (FEM),' + 
-  '<br> Male Dragonhalf Assasain (MDA)' +
-  '<br> Male Human Wizard (MHW)' + 
-  '<br>Female Dwarf Crusader (FDC)' + 
-  '<br> Female Dragonhalf Mercenary (FDM)' +
-  '<br> Male Elf Sharpshooter (MES)');
-  $('#question').html('Please enter your character code.');
+  $('#scenetext').html('Please pick your character. <br> <br> Arden, a Female Elf Marksmen (FEM),' + 
+  '<br> Riven, a Male Dragonhalf Assasain (MDA)' +
+  '<br> Thoth, a Male Human Wizard (MHW)' + 
+  '<br> Brynja, Female Dwarf Crusader (FDC)' + 
+  '<br> Vritra, a Female Dragonhalf Mercenary (FDM)' +
+  '<br> Axl, Male Elf Sharpshooter (MES)');
+  $('#question').html('Press the button with the characters name.');
+  scene4Question();
 }
-function scene6Answer(answer){
-  if (answer != "FEM" && answer != "MDA" && answer != "MHW" && answer != 'FDC' && answer != 'FDM' && answer != 'MES' && answer != 'Stest' && answer != 'Ftest'){
-    $('#message').html('Please enter the three character code.');
-    return;
-  }
-    if (answer == 'Ftest'){
+
+function scene4Answer(options){
+  switch (options) {
+  case 'FT':
+    // call the game function for Option A
+    player.name = 'Failure'
     player.sex = 'male';
     player.character = 'test';
     player.race = 'human';
@@ -134,9 +112,14 @@ function scene6Answer(answer){
     player.wisdom = 0;
     player.magic = 0;
     player.armor = 0;
-    player.enemyE = -50;   
-  }
-      if (answer == 'Stest'){
+    player.enemyE = -50;
+    updateStats();
+    scene7();
+    break;
+      
+  case 'ST':
+    
+    player.name = 'Success'
     player.sex = 'female';
     player.character = 'test';
     player.race = 'human';
@@ -154,9 +137,14 @@ function scene6Answer(answer){
     player.wisdom = 150;
     player.magic = 150;
     player.armor = 150;
-    player.enemyE = 10;   
-  }
-  if (answer == 'FEM'){
+    player.enemyE = 10;
+    updateStats();
+    scene7();
+    break;
+      
+  case 'Arden':
+    
+    player.name = 'Arden';
     player.sex = 'female';
     player.character = 'FEM';
     player.race = 'elf';
@@ -174,9 +162,13 @@ function scene6Answer(answer){
     player.wisdom = 40;
     player.magic = 0;
     player.armor = 25;
-    player.enemyE = 0;   
-  }
-    if (answer == 'MDA'){
+    player.enemyE = 0;
+    updateStats();
+    scene7();
+    break;
+
+  case 'Riven':
+    player.name = 'Riven';
     player.sex = 'male';
     player.character= 'MDA';
     player.race = 'Dragonhalf';
@@ -194,9 +186,13 @@ function scene6Answer(answer){
     player.wisdom = 50;
     player.magic = 0;
     player.armor = 30;
-    player.enemyE = 50;   
-  }
-    if (answer == 'MHW'){
+    player.enemyE = 50; 
+    updateStats();
+    scene7();  
+    break;
+      
+  case 'Thoth':
+    player.name = 'Thoth';
     player.sex = 'male';
     player.character = 'MHW';
     player.race = 'human';
@@ -214,9 +210,13 @@ function scene6Answer(answer){
     player.wisdom = 40;
     player.magic = 50;
     player.armor = 15;
-    player.enemyE = 10;   
-  }
-    if (answer == 'FDC'){
+    player.enemyE = 10;
+    updateStats();
+    scene7();
+    break;
+      
+  case 'Brynja':
+  player.name = 'Brynja';
     player.sex = 'female';
     player.character = 'FDC';
     player.race = 'dwarf';
@@ -234,9 +234,13 @@ function scene6Answer(answer){
     player.wisdom = 30;
     player.magic = 0;
     player.armor = 40;
-    player.enemyE = 50;   
-  }
-    if (answer == 'FDM'){
+    player.enemyE = 50;
+    updateStats();
+    scene7();
+    break;
+
+  case 'Virtra':
+    player.name = 'Virtra';
     player.sex = 'female';
     player.character = 'FDM';
     player.race = 'dragonhalf';
@@ -254,9 +258,13 @@ function scene6Answer(answer){
     player.wisdom = 50;
     player.magic = 0;
     player.armor = 35;
-    player.enemyE = 50;   
-  }
-    if (answer == 'MES'){
+    player.enemyE = 50;
+    updateStats();
+    scene7();
+    break;
+      
+  case 'Axl':
+    player.name = 'Axl';
     player.sex = 'male';
     player.character = 'MES';
     player.race = 'elf';
@@ -274,9 +282,9 @@ function scene6Answer(answer){
     player.wisdom = 40;
     player.magic = 0;
     player.armor = 25;
-    player.enemyE = 50;   
-  }
-  updateStats();
-    $('#message').html('');
+    player.enemyE = 50;
+    updateStats();
     scene7();
+    break;
+  }
 }

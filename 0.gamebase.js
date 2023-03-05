@@ -1,7 +1,7 @@
 /* Global Variables */
 var currentScene = 1;
 var player = {
-  name:'',
+  name:'none',
   character: '',
   race: '',
   sex:'',
@@ -29,10 +29,12 @@ var have = "'ve"
 var is = "'s"
 var are = "'re"
 var am = "'m"
+// options array
+var options;
+var newOptions;
 // Variables for Chapter 1
 //use functions scene25-29(); for any extra random functions that don't have anything to do with the other code. Or save them for when I want to work on further scenes on Barricade.js
 var enemy = 3;
-var scenex = 0;
 var demo = false;
 var weak = false;
 var trapSet = false;
@@ -143,10 +145,3 @@ function handleAnswer(answer) {
   console.log('Calling function ' + sceneFunctionName + ' with answer: ' + answer);
   window[sceneFunctionName](answer);
 }
-// wire
-// wire go button to call handleAnswer when clicked and reset input box
-$('#answerForm').submit(function (e) {
-  e.preventDefault();
-  handleAnswer($('#answer').val()); // pass answer to handleAnswer
-  $('#answer').val(''); // clear answer
-});

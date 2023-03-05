@@ -9,25 +9,25 @@ function scene7() {
     $('#scenetext').html('You jolt awake at a small noise that echos thow the halls');
   }
   $('#question').html('What would you like to do? <br> <br> Hide, Investigate, Return to Sleep (Sleep), or Barricade?');
+  scene7Question();
 }
-function scene7Answer(answer) {
-  if (answer != 'Hide' && answer != 'Investigate' && answer != 'Sleep' && answer != 'Barricade'){
-    $('#message').html('Please enter one of the given options.');
-    return;
-  }else{
-    $('#message').html('')
-    if (answer == 'Hide'){
-      scene8();
-    }
-    if (answer == 'Sleep'){
-      scene9();
-    }
-    if (answer == 'Investigate'){
-      scene10();
-    }
-    if (answer == 'Barricade'){
-      scene11();
-    }
+
+function scene7Answer(options) {
+  switch (options) {
+  case 'Hide':
+    scene8();
+    break;
+      
+  case 'Sleep':
+    scene9();
+    break;
+      
+  case 'Investigate':
+    scene10();
+    break;
+
+  case 'Barricade':
+    scene11();  
+    break;
   }
-    $('#message').html('');
 }
