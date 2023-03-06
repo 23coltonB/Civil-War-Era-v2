@@ -14,8 +14,8 @@ function scene9(){
   sleep = true;
 }
 
-function scene9Answer(textContent) {
-  switch (textContent) {
+function scene9Answer(options) {
+  switch (options) {
   case 'Level Select':
     // call the game function for Option A
     levelSelect300();

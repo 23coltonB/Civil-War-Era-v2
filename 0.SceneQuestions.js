@@ -1427,7 +1427,229 @@ function scene35QuestionB(){
   }
 }
 
-//Level Select
+//Side quest questions
+
+    //Escort - Sleep
+function scene81QuestionA(){
+     // options
+  options = ["Answer", "Eat"];
+
+  // update buttons
+  var buttonContainer = document.getElementById("questionAnswer");
+  buttonContainer.innerHTML = "";
+
+  // building buttons and where to put them
+  for (var i = 0; i < options.length; i++) {
+    var button = document.createElement("button");
+    button.textContent = options[i];
+    button.addEventListener("click", function() {
+      scene81Answer(this.textContent);
+    });
+    buttonContainer.appendChild(button);
+  }
+}
+
+function scene82Question(){
+       // options
+  options = ["Level Select"];
+
+  // update buttons
+  var buttonContainer = document.getElementById("questionAnswer");
+  buttonContainer.innerHTML = "";
+
+  // building buttons and where to put them
+  for (var i = 0; i < options.length; i++) {
+    var button = document.createElement("button");
+    button.textContent = options[i];
+    button.addEventListener("click", function() {
+      scene82Answer(this.textContent);
+    });
+    buttonContainer.appendChild(button);
+  }
+}
+
+function scene83Question(){
+         // options
+  options = ["Yes", "No"];
+
+  // update buttons
+  var buttonContainer = document.getElementById("questionAnswer");
+  buttonContainer.innerHTML = "";
+
+  // building buttons and where to put them
+  for (var i = 0; i < options.length; i++) {
+    var button = document.createElement("button");
+    button.textContent = options[i];
+    button.addEventListener("click", function() {
+      scene83Answer(this.textContent);
+    });
+    buttonContainer.appendChild(button);
+  }
+}
+
+function scene84Question(){
+          // options
+  options = ['"Whos the Dutchess Dragon?"', '"What did I do?"'];
+
+  // update buttons
+  var buttonContainer = document.getElementById("questionAnswer");
+  buttonContainer.innerHTML = "";
+
+  // building buttons and where to put them
+  for (var i = 0; i < options.length; i++) {
+    var button = document.createElement("button");
+    button.textContent = options[i];
+    button.addEventListener("click", function() {
+      scene84Answer(this.textContent);
+    });
+    buttonContainer.appendChild(button);
+  }
+}
+
+function scene85QuestionA(){
+            // options
+  options = ['Go with', '"What did I do?"'];
+
+  // update buttons
+  var buttonContainer = document.getElementById("questionAnswer");
+  buttonContainer.innerHTML = "";
+
+  // building buttons and where to put them
+  for (var i = 0; i < options.length; i++) {
+    var button = document.createElement("button");
+    button.textContent = options[i];
+    button.addEventListener("click", function() {
+      scene85Answer(this.textContent);
+    });
+    buttonContainer.appendChild(button);
+  }
+}
+
+function scene85QuestionB(){
+              // options
+  options = ['Go with'];
+
+  // update buttons
+  var buttonContainer = document.getElementById("questionAnswer");
+  buttonContainer.innerHTML = "";
+
+  // building buttons and where to put them
+  for (var i = 0; i < options.length; i++) {
+    var button = document.createElement("button");
+    button.textContent = options[i];
+    button.addEventListener("click", function() {
+      scene85Answer(this.textContent);
+    });
+    buttonContainer.appendChild(button);
+  }
+}
+
+function scene86QuestionA(){
+            // options
+  options = ['Go with', '"Whos the Dutchess Dragon?"'];
+
+  // update buttons
+  var buttonContainer = document.getElementById("questionAnswer");
+  buttonContainer.innerHTML = "";
+
+  // building buttons and where to put them
+  for (var i = 0; i < options.length; i++) {
+    var button = document.createElement("button");
+    button.textContent = options[i];
+    button.addEventListener("click", function() {
+      scene86Answer(this.textContent);
+    });
+    buttonContainer.appendChild(button);
+  }
+}
+
+function scene86QuestionB(){
+              // options
+  options = ['Go with'];
+
+  // update buttons
+  var buttonContainer = document.getElementById("questionAnswer");
+  buttonContainer.innerHTML = "";
+
+  // building buttons and where to put them
+  for (var i = 0; i < options.length; i++) {
+    var button = document.createElement("button");
+    button.textContent = options[i];
+    button.addEventListener("click", function() {
+      scene86Answer(this.textContent);
+    });
+    buttonContainer.appendChild(button);
+  }
+}
+
+function scene87Question(){
+                // options
+  options = ['Get ready', 'Escape'];
+
+  // update buttons
+  var buttonContainer = document.getElementById("questionAnswer");
+  buttonContainer.innerHTML = "";
+
+  // building buttons and where to put them
+  for (var i = 0; i < options.length; i++) {
+    var button = document.createElement("button");
+    button.textContent = options[i];
+    button.addEventListener("click", function() {
+      scene87Answer(this.textContent);
+    });
+    buttonContainer.appendChild(button);
+  }
+}
+
+function scene88Question(){
+                  // options
+  options = ['Level Select'];
+
+  // update buttons
+  var buttonContainer = document.getElementById("questionAnswer");
+  buttonContainer.innerHTML = "";
+
+  // building buttons and where to put them
+  for (var i = 0; i < options.length; i++) {
+    var button = document.createElement("button");
+    button.textContent = options[i];
+    button.addEventListener("click", function() {
+      scene88Answer(this.textContent);
+    });
+    buttonContainer.appendChild(button);
+  }
+}
+
+function scene89Question(){
+                  // options
+  options = ['Level Select'];
+
+  // update buttons
+  var buttonContainer = document.getElementById("questionAnswer");
+  buttonContainer.innerHTML = "";
+
+  // building buttons and where to put them
+  for (var i = 0; i < options.length; i++) {
+    var button = document.createElement("button");
+    button.textContent = options[i];
+    button.addEventListener("click", function() {
+      scene89Answer(this.textContent);
+    });
+    buttonContainer.appendChild(button);
+  }
+}
+
+    //Escort - Hidden
+function scene81QuestionB(){
+  
+}
+
+    //Escort - communication
+function scene81QuestionC(){
+  
+}
+
+//Level Select questions
 function levelSelect300QuestionA(){
             // options
   options = ["Chapter 2"];

@@ -34,8 +34,6 @@ function levelSelect300(){
         chapter1_sidequest3 = true;
         levelSelect300QuestionC();
         $('#scenetext').html('Welcome to Level Select! <p> You have not quite unlocked the next chapter, however  a sidequest has been unlocked! You have discovered 1/3 sidequests: Captured, Flee, and Escort. <p> Flee sidequest unlocked. <br> current awards encountered: <br>  Caring: ' + awards.caring  + '<br> Mr. Resistant: ' + awards.Mr_Resistant + '<br> award2: ' + awards.newAward2 + '<br> award3: ' + awards.newAward3 + '<br> award4: ' +awards.newAward4 + '');
-        
-        
       }
     }
     End = false;
