@@ -27,7 +27,7 @@ function scene27(){
    $('#scenetext').html('You lazily walk toward the door, and put your hand on the door knob. Its locked. <br> <br> but lucky for you, the lock is on your side. You effortlessly, you unlock the lock, and open the door. Two guards wearing matching green tunics, and silver helments stand their waiting patently behind your door. <br> <br> "What do you want?" you ask tiredly.<br> <br> Your current LP (Level Points) count is ' + LP + '!');
    var morning = true;
   var communication = true;
-  scene28Question();
+  scene27Question();
  $('#question').html('Type "Enter" to go to Level Select');
 }
 
@@ -42,7 +42,7 @@ function scene28(){
   currentScene = 28;
   if (x <= player.enemyE + 50){
     bandit = true;
-      $('#scenetext').html('You turn your back to the door, in your average sized appartment, as the knocking continues, eventlually, you begin to hear less, and less of the knocking, until it has turned into a soft trickle in the background. The door bursts open, which, of course, shocks you out of your sleep. <br> <br> "Hey! What gi-" you start to say before you see who forcefully open your door. Three hooded figures enter your appartment. How badly did I cover my tracks? You wonder to yourself, as you slowly climb out of bed. I thought I did a good job! You hop out of bed, quickly grabbing your ' + player.weapons +' from your hiding place. You notice something glinting around their cuffs, and with practice ease, you prepare yourself for combat.');
+      $('#scenetext').html('You turn your back to the door, in your average sized appartment, as the knocking continues, eventlually, you begin to hear less, and less of the knocking, until it has turned into a soft trickle in the background. The door bursts open, which, of course, shocks you out of your sleep. <br> <br> "Hey! What gi-" you start to say before you see who forcefully open your door. Three hooded figures enter your appartment. How badly did I cover my tracks? You wonder to yourself, as you slowly climb out of bed. I thought I did a good job! You hop out of bed, quickly grabbing your ' + player.weaponss +' from your hiding place. You notice something glinting around their cuffs, and with practice ease, you prepare yourself for combat.');
     scene28QuestionB();
       $('#question').html('press continue to go to combat!');
   }else{
@@ -146,43 +146,43 @@ currentScene = 30;
 if (player.character == 'FEM' || player.character == 'MES'){
   if (x <= player.accuracyR){
     if (x <= player.randomCrit && enemy != 1){
-      $('#scenetext').html('You turn your ' + player.weapon + ' towards the final bandit, and let your arrow fly. It strikes true, piercing through one bandit, and into the leg of another.');
+      $('#scenetext').html('You turn your ' + player.weapons + ' towards the final bandit, and let your arrow fly. It strikes true, piercing through one bandit, and into the leg of another.');
       enemy = Number(enemy) - 2;
   }else{
     if (enemy != 1){
-      $('#scenetext').html('You turn your ' + player.weapon + ' towards the closest bandit, and let your arrow fly. It strikes true, right in the heart.');
+      $('#scenetext').html('You turn your ' + player.weapons + ' towards the closest bandit, and let your arrow fly. It strikes true, right in the heart.');
       enemy = Number(enemy) - 1;
     }else{
-      $('#scenetext').html('You turn your ' + player.weapon + ' towards the final bandit, and let your arrow fly. It strikes true, right in the heart.');
+      $('#scenetext').html('You turn your ' + player.weapons + ' towards the final bandit, and let your arrow fly. It strikes true, right in the heart.');
       enemy = Number(enemy) - 1;
     }
   }
 }else{
     if (enemy != 1){
-      $('#scenetext').html('You turn your ' + player.weapon + ' towards the closest bandit, and let your arrow fly. It misses by a mile.');
+      $('#scenetext').html('You turn your ' + player.weapons + ' towards the closest bandit, and let your arrow fly. It misses by a mile.');
     }else{
-      $('#scenetext').html('You turn your ' + player.weapon + ' towards the final bandit, and let your arrow fly. It misses by a mile.');
+      $('#scenetext').html('You turn your ' + player.weapons + ' towards the final bandit, and let your arrow fly. It misses by a mile.');
     }
   }
 }else{
 if (x <= player.accuracyM){
   if (x <= player.randomCrit && enemy != 1){
-    $('#scenetext').html('You run into the fray, using your ' + player.weapon + ' to stab the closest bandit. It lands in their chest, as you pary and kick another bandit, who flew into a wall.');
+    $('#scenetext').html('You run into the fray, using your ' + player.weapons + ' to stab the closest bandit. It lands in their chest, as you pary and kick another bandit, who flew into a wall.');
       enemy = Number(enemy) - 2;
   }else{
     if (enemy != 1){
-      $('#scenetext').html('You run into the fray, using your ' + player.weapon + ' to stab the closest bandit. It pirces their heart. Before the other bandits can get to you, you jump out of their reach.');
+      $('#scenetext').html('You run into the fray, using your ' + player.weapons + ' to stab the closest bandit. It pirces their heart. Before the other bandits can get to you, you jump out of their reach.');
       enemy = Number(enemy) - 1;
     }else{
-      $('#scenetext').html('You run into the fray, using your ' + player.weapon + ' to stab the last bandit. It pirces their heart. They let out a gurgle, and drop to the floor');
+      $('#scenetext').html('You run into the fray, using your ' + player.weapons + ' to stab the last bandit. It pirces their heart. They let out a gurgle, and drop to the floor');
       enemy = Number(enemy) - 1;
       }
   }
 }else{
   if (enemy != 1){
-    $('#scenetext').html('You run into the fray, using your ' + player.weapon + ' to stab the closest bandit. The bandit blocks it, and you jump out of their grasp before the other bandits can get to you, you jump out of their reach.');
+    $('#scenetext').html('You run into the fray, using your ' + player.weapons + ' to stab the closest bandit. The bandit blocks it, and you jump out of their grasp before the other bandits can get to you, you jump out of their reach.');
   }else{
-    $('#scenetext').html('You run into the fray, using your ' + player.weapon + ' to stab the closest bandit. The bandit blocks it, and you jump out of the bandits grasp before the bandit can grab you.');
+    $('#scenetext').html('You run into the fray, using your ' + player.weapons + ' to stab the closest bandit. The bandit blocks it, and you jump out of the bandits grasp before the bandit can grab you.');
       }
     }    
   }
@@ -227,7 +227,7 @@ function scene31(){
         LP = Number(LP) + 17;
       scene31QuestionA();
         updateStats();
-        $('#scenetext').html("You attempt to dive out of the reach of the assailents, but you didn't move fast enough. You swiftly are disarmed of your " + player.weapons + ', something sharp touching your throat.<br> <br> Your current LP (Level Points) count is ' + LP + '!');
+        $('#scenetext').html("You attempt to dive out of the reach of the assailents, but you didn't move fast enough. You swiftly are disarmed of your " + player.weaponss + ', something sharp touching your throat.<br> <br> Your current LP (Level Points) count is ' + LP + '!');
         $('#question').html('Type "Enter" to go to Level Select');
         var enemyCapture = true;
         End = true;
@@ -237,19 +237,19 @@ function scene31(){
     if (x <= player.accuracyM){
       if (x <= player.randomCrit){
         if (enemy != 1){
-          $('#scenetext').html('You ready yourself for the oncomeing onslaught. You effortlessly parry the first assailent with your ' + player.secondarys + ', strikeing down the second one with your' + player.weapons + ' and dodging the third. To your surpise, you ended up knocking out one of the assailents when you parried. Good for you.');
+          $('#scenetext').html('You ready yourself for the oncomeing onslaught. You effortlessly parry the first assailent with your ' + player.secondary + ', strikeing down the second one with your' + player.weaponss + ' and dodging the third. To your surpise, you ended up knocking out one of the assailents when you parried. Good for you.');
             enemy = Number(enemy) - 2;
       }else{
-      $('#scenetext').html('You ready yourself for the oncomeing onslaught. You  parry the last assailent with your ' + player.weapons + ', redirecting the bandits blade to fly into your wall. You just had that fixed! You think to yourself. With frustration, you knock out the last assailent with your ' + player.secondarys + ' and he crumples to the floor.');
+      $('#scenetext').html('You ready yourself for the oncomeing onslaught. You  parry the last assailent with your ' + player.weaponss + ', redirecting the bandits blade to fly into your wall. You just had that fixed! You think to yourself. With frustration, you knock out the last assailent with your ' + player.secondary + ' and he crumples to the floor.');
         enemy = Number(enemy) - 1;
       }
         $('#question').html("Press continue to continue");
         scene31QuestionB();
       }else{
         if (enemy == 2){
-          $('#scenetext').html('You ready yourself for the oncomeing onslaught. You effortlessly parry the first assailent with your ' + player.secondarys + ', strikeing down the second one with your ' + player.weapons + '.');
+          $('#scenetext').html('You ready yourself for the oncomeing onslaught. You effortlessly parry the first assailent with your ' + player.secondary + ', strikeing down the second one with your ' + player.weaponss + '.');
         }else{
-          $('#scenetext').html('You ready yourself for the oncomeing onslaught. The bandit swings at you with what appers to be a dagger, which you effortlessly parry  with your ' + player.weapons + ', and stabbing him in the side with your ' + player.secondarys + '.');
+          $('#scenetext').html('You ready yourself for the oncomeing onslaught. The bandit swings at you with what appers to be a dagger, which you effortlessly parry  with your ' + player.weaponss + ', and stabbing him in the side with your ' + player.secondary + '.');
         }
         $('#question').html("Press continue to continue");
         scene31QuestionB();
@@ -266,7 +266,7 @@ function scene31(){
     LP = Number(LP) + 17;
     scene31QuestionA();
     updateStats();
-    $('#scenetext').html('You attempt to block the first figure with your ' + player.secondarys + ', but to your horror, you fail to do so. The assailent dives at you, knocking away your weapons.<br> <br> Your current LP (Level Points) count is ' + LP + '!');
+    $('#scenetext').html('You attempt to block the first figure with your ' + player.secondary + ', but to your horror, you fail to do so. The assailent dives at you, knocking away your weapons.<br> <br> Your current LP (Level Points) count is ' + LP + '!');
     $('#question').html('Type "Enter" to go to Level Select');
       var enemyCapture = true;
   }
@@ -289,9 +289,9 @@ function scene32(){
   currentScene = 32;
   if (x <= player.speed && x <= player.strength){
     if (enemy != 1){
-    $('#scenetext').html('You use your ' + player.secondarys +' to block one attack to the next, thankfully they buzz off after you block each attacks.');
+    $('#scenetext').html('You use your ' + player.secondary +' to block one attack to the next, thankfully they buzz off after you block each attacks.');
     }else{
-      $('#scenetext').html('You use your ' + player.secondarys +' to block the next attack from the bandits, thankfully he buzzes off after you block each attack.');
+      $('#scenetext').html('You use your ' + player.secondary +' to block the next attack from the bandits, thankfully he buzzes off after you block each attack.');
     }
     scene32QuestionB();
     $('#question').html('Press continue to continue the fight!');
@@ -299,7 +299,7 @@ function scene32(){
     scene32QuestionA();
     LP = Number(LP) + 17;
     updateStats();
-    $('#scenetext').html('You attempt to block the first figure with your ' + player.secondarys + ', but to your horror, you fail to do so. The assailents dives at you, knocking away your weapons.<br> <br> Your current LP (Level Points) count is ' + LP + '!');
+    $('#scenetext').html('You attempt to block the first figure with your ' + player.secondary + ', but to your horror, you fail to do so. The assailents dives at you, knocking away your weapons.<br> <br> Your current LP (Level Points) count is ' + LP + '!');
     $('#question').html('Type "Enter" to go to Level Select');
       var enemyCapture = true;
   }
@@ -346,7 +346,7 @@ function scene34(){
       $('#scenetext').html("You point your staff to your enemies, shouting <br> 'Fulgur Percutiens!' Before you can finsih your cantrip, a lightning bolt leaves the staff, electrifying not only the bandit you were aming at, but the bandit next to him, knocking them out.");
       enemy = Number(enemy) - 2;
     }else{
-       $('#scenetext').html("You aren't as powerfull without your staff, but it'll have to work. You throw your hands out, shouting <br> 'Globus Igneus!' Before you can finsih your cantrip, a fire ball leaves your hands, compleatly engulfing one of the intruders.");
+       $('#scenetext').html(" You throw your hands out, shouting <br> 'Globus Igneus!' Before you can finsih your cantrip, a fire ball leaves your hands, compleatly engulfing one of the intruders.");
       enemy = Number(enemy) - 1;
     }
     scene34QuestionB();
@@ -355,7 +355,7 @@ function scene34(){
     LP = Number(LP) + 17;
     scene34QuestionA();
     updateStats();
-     $('#scenetext').html("You aren't as powerfull without your staff, but it'll have to work. You throw your hands out, shouting <br> ''Globus Igneus!' But, to your dismay, only a small puff of smoke leaves your open palms. Before you can try again, you are swiftly surrounded, and captured by your assailants <br> <br> Your current LP (Level Points) count is " + LP + "!");
+     $('#scenetext').html(" You throw your hands out, shouting <br> ''Globus Igneus!' But, to your dismay, only a small puff of smoke leaves your open palms. Before you can try again, you are swiftly surrounded, and captured by your assailants <br> <br> Your current LP (Level Points) count is " + LP + "!");
      $('#question').html('Type "Enter" to go to Level Select');
      var enemyCapture = true;
     End = true;
@@ -364,7 +364,7 @@ function scene34(){
 
 function scene34Answer(options){
   switch (options){
-    case 'continue':
+    case 'Continue':
       scene29();
       break;
     case 'Level Select':
@@ -377,10 +377,12 @@ function scene35(){
   currentScene = 35;
   if (x <= player.magic && x <= player.speed){
     $('#scenetext').html('You throw your hands out, shouting <br> "Lux Praesidium!" Almost instantly, a white scale formation flew from his hands and staff, forming a white protective layr between you and the bandits. They rush you, but the sheild stop their attacks. It wont last long though');
+    scene35QuestionB();
      $('#question').html('Press continue to continue');
   }else{
     LP = Number(LP) + 17;
     updateStats();
+    scene35QuestionA();
      $('#scenetext').html("You throw your hands out, shouting <br> 'Lux Praesidium!' But, to your dismay, only a small puff of smoke leaves your open palms. Before you can try again, you are swiftly surrounded, and captured by your assailants <br> <br> Your current LP (Level Points) count is " + LP + "!");
      $('#question').html('Type "Enter" to go to Level Select');
      var enemyCapture = true;

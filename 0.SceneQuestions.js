@@ -1220,7 +1220,7 @@ function scene29QuestionE(){
 
 function scene29QuestionF(){
   // options
-  options = ["Level select"];
+  options = ["Level Select"];
 
   // update buttons
   var buttonContainer = document.getElementById("questionAnswer");
