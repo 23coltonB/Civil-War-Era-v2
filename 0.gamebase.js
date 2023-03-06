@@ -35,6 +35,7 @@ var newOptions;
 // Variables for Chapter 1
 //use functions scene25-29(); for any extra random functions that don't have anything to do with the other code. Or save them for when I want to work on further scenes on Barricade.js
 var enemy = 3;
+var secretWeapon = 0;
 var demo = false;
 var weak = false;
 var trapSet = false;

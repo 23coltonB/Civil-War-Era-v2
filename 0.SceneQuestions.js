@@ -111,7 +111,7 @@ function scene7Question(){
   }
 }
 
-  //Sleep
+  // sleep
 function scene9Question(){
   // options
   var options = ["Level Select"];
@@ -131,7 +131,7 @@ function scene9Question(){
   }
 }
 
-//barricade
+// barricade
 function scene11QuestionA(){
   options = ["Arm Yourself", "Set a Trap", "Hide Yourself"];
   
@@ -1040,6 +1040,388 @@ function scene69Question(){
     button.textContent = options[i];
     button.addEventListener("click", function() {
       scene69Answer(this.textContent);
+    });
+    buttonContainer.appendChild(button);
+  }
+}
+
+// Investigate
+function scene10Question(){
+                           // options
+  options = ["Go back to sleep", "Answer"];
+
+  // update buttons
+  var buttonContainer = document.getElementById("questionAnswer");
+  buttonContainer.innerHTML = "";
+
+  // building buttons and where to put them
+  for (var i = 0; i < options.length; i++) {
+    var button = document.createElement("button");
+    button.textContent = options[i];
+    button.addEventListener("click", function() {
+      scene10Answer(this.textContent);
+    });
+    buttonContainer.appendChild(button);
+  }
+}
+
+function scene27Question(){
+                             // options
+  options = ["Level Select"];
+
+  // update buttons
+  var buttonContainer = document.getElementById("questionAnswer");
+  buttonContainer.innerHTML = "";
+
+  // building buttons and where to put them
+  for (var i = 0; i < options.length; i++) {
+    var button = document.createElement("button");
+    button.textContent = options[i];
+    button.addEventListener("click", function() {
+      scene27Answer(this.textContent);
+    });
+    buttonContainer.appendChild(button);
+  }
+}
+
+
+function scene28QuestionA(){
+                              // options
+  options = ["Level Select"];
+
+  // update buttons
+  var buttonContainer = document.getElementById("questionAnswer");
+  buttonContainer.innerHTML = "";
+
+  // building buttons and where to put them
+  for (var i = 0; i < options.length; i++) {
+    var button = document.createElement("button");
+    button.textContent = options[i];
+    button.addEventListener("click", function() {
+      scene28Answer(this.textContent);
+    });
+    buttonContainer.appendChild(button);
+  }
+}
+
+function scene28QuestionB(){
+                              // options
+  options = ["Combat"];
+
+  // update buttons
+  var buttonContainer = document.getElementById("questionAnswer");
+  buttonContainer.innerHTML = "";
+
+  // building buttons and where to put them
+  for (var i = 0; i < options.length; i++) {
+    var button = document.createElement("button");
+    button.textContent = options[i];
+    button.addEventListener("click", function() {
+      scene28Answer(this.textContent);
+    });
+    buttonContainer.appendChild(button);
+  }
+}
+
+function scene29QuestionA(){
+  // options
+  options = ["Attack", "Dodge and strike"];
+
+  // update buttons
+  var buttonContainer = document.getElementById("questionAnswer");
+  buttonContainer.innerHTML = "";
+
+  // building buttons and where to put them
+  for (var i = 0; i < options.length; i++) {
+    var button = document.createElement("button");
+    button.textContent = options[i];
+    button.addEventListener("click", function() {
+      scene29Answer(this.textContent);
+    });
+    buttonContainer.appendChild(button);
+  }
+}
+
+function scene29QuestionB(){
+  // options
+  options = ["Attack", "Dodge and strike", "Secret weapon"];
+
+  // update buttons
+  var buttonContainer = document.getElementById("questionAnswer");
+  buttonContainer.innerHTML = "";
+
+  // building buttons and where to put them
+  for (var i = 0; i < options.length; i++) {
+    var button = document.createElement("button");
+    button.textContent = options[i];
+    button.addEventListener("click", function() {
+      scene29Answer(this.textContent);
+    });
+    buttonContainer.appendChild(button);
+  }
+}
+
+function scene29QuestionC(){
+  // options
+  options = ["Defend", "Attack", "Defend and strike"];
+
+  // update buttons
+  var buttonContainer = document.getElementById("questionAnswer");
+  buttonContainer.innerHTML = "";
+
+  // building buttons and where to put them
+  for (var i = 0; i < options.length; i++) {
+    var button = document.createElement("button");
+    button.textContent = options[i];
+    button.addEventListener("click", function() {
+      scene29Answer(this.textContent);
+    });
+    buttonContainer.appendChild(button);
+  }
+}
+
+function scene29QuestionD(){
+  // options
+  options = ["Defend", "Attack", "Defend and strike", "Secret weapon"];
+
+  // update buttons
+  var buttonContainer = document.getElementById("questionAnswer");
+  buttonContainer.innerHTML = "";
+
+  // building buttons and where to put them
+  for (var i = 0; i < options.length; i++) {
+    var button = document.createElement("button");
+    button.textContent = options[i];
+    button.addEventListener("click", function() {
+      scene29Answer(this.textContent);
+    });
+    buttonContainer.appendChild(button);
+  }
+}
+
+function scene29QuestionE(){
+  // options
+  options = ["Magic attack", "Magic defense"];
+
+  // update buttons
+  var buttonContainer = document.getElementById("questionAnswer");
+  buttonContainer.innerHTML = "";
+
+  // building buttons and where to put them
+  for (var i = 0; i < options.length; i++) {
+    var button = document.createElement("button");
+    button.textContent = options[i];
+    button.addEventListener("click", function() {
+      scene29Answer(this.textContent);
+    });
+    buttonContainer.appendChild(button);
+  }
+}
+
+function scene29QuestionF(){
+  // options
+  options = ["Level select"];
+
+  // update buttons
+  var buttonContainer = document.getElementById("questionAnswer");
+  buttonContainer.innerHTML = "";
+
+  // building buttons and where to put them
+  for (var i = 0; i < options.length; i++) {
+    var button = document.createElement("button");
+    button.textContent = options[i];
+    button.addEventListener("click", function() {
+      scene29Answer(this.textContent);
+    });
+    buttonContainer.appendChild(button);
+  }
+}
+
+function scene30Question(){
+                            // options
+  options = ["Continue"];
+
+  // update buttons
+  var buttonContainer = document.getElementById("questionAnswer");
+  buttonContainer.innerHTML = "";
+
+  // building buttons and where to put them
+  for (var i = 0; i < options.length; i++) {
+    var button = document.createElement("button");
+    button.textContent = options[i];
+    button.addEventListener("click", function() {
+      scene30Answer(this.textContent);
+    });
+    buttonContainer.appendChild(button);
+  }
+}
+
+function scene31QuestionA(){
+                              // options
+  options = ["Level Select"];
+
+  // update buttons
+  var buttonContainer = document.getElementById("questionAnswer");
+  buttonContainer.innerHTML = "";
+
+  // building buttons and where to put them
+  for (var i = 0; i < options.length; i++) {
+    var button = document.createElement("button");
+    button.textContent = options[i];
+    button.addEventListener("click", function() {
+      scene31Answer(this.textContent);
+    });
+    buttonContainer.appendChild(button);
+  }
+}
+
+function scene31QuestionB(){
+                                // options
+  options = ["Continue"];
+
+  // update buttons
+  var buttonContainer = document.getElementById("questionAnswer");
+  buttonContainer.innerHTML = "";
+
+  // building buttons and where to put them
+  for (var i = 0; i < options.length; i++) {
+    var button = document.createElement("button");
+    button.textContent = options[i];
+    button.addEventListener("click", function() {
+      scene31Answer(this.textContent);
+    });
+    buttonContainer.appendChild(button);
+  }
+}
+
+function scene32QuestionA(){
+                                // options
+  options = ["Level Select"];
+
+  // update buttons
+  var buttonContainer = document.getElementById("questionAnswer");
+  buttonContainer.innerHTML = "";
+
+  // building buttons and where to put them
+  for (var i = 0; i < options.length; i++) {
+    var button = document.createElement("button");
+    button.textContent = options[i];
+    button.addEventListener("click", function() {
+      scene32Answer(this.textContent);
+    });
+    buttonContainer.appendChild(button);
+  }
+}
+
+function scene32QuestionB(){
+                                // options
+  options = ["Continue"];
+
+  // update buttons
+  var buttonContainer = document.getElementById("questionAnswer");
+  buttonContainer.innerHTML = "";
+
+  // building buttons and where to put them
+  for (var i = 0; i < options.length; i++) {
+    var button = document.createElement("button");
+    button.textContent = options[i];
+    button.addEventListener("click", function() {
+      scene32Answer(this.textContent);
+    });
+    buttonContainer.appendChild(button);
+  }
+}
+
+function scene33Question(){
+                                 // options
+  options = ["Continue"];
+
+  // update buttons
+  var buttonContainer = document.getElementById("questionAnswer");
+  buttonContainer.innerHTML = "";
+
+  // building buttons and where to put them
+  for (var i = 0; i < options.length; i++) {
+    var button = document.createElement("button");
+    button.textContent = options[i];
+    button.addEventListener("click", function() {
+      scene33Answer(this.textContent);
+    });
+    buttonContainer.appendChild(button);
+  }
+}
+
+function scene34QuestionA(){
+                                   // options
+  options = ["Level Select"];
+
+  // update buttons
+  var buttonContainer = document.getElementById("questionAnswer");
+  buttonContainer.innerHTML = "";
+
+  // building buttons and where to put them
+  for (var i = 0; i < options.length; i++) {
+    var button = document.createElement("button");
+    button.textContent = options[i];
+    button.addEventListener("click", function() {
+      scene34Answer(this.textContent);
+    });
+    buttonContainer.appendChild(button);
+  }
+}
+
+function scene34QuestionB(){
+                                     // options
+  options = ["Continue"];
+
+  // update buttons
+  var buttonContainer = document.getElementById("questionAnswer");
+  buttonContainer.innerHTML = "";
+
+  // building buttons and where to put them
+  for (var i = 0; i < options.length; i++) {
+    var button = document.createElement("button");
+    button.textContent = options[i];
+    button.addEventListener("click", function() {
+      scene34Answer(this.textContent);
+    });
+    buttonContainer.appendChild(button);
+  }
+}
+
+function scene35QuestionA(){
+                                       // options
+  options = ["Level Select"];
+
+  // update buttons
+  var buttonContainer = document.getElementById("questionAnswer");
+  buttonContainer.innerHTML = "";
+
+  // building buttons and where to put them
+  for (var i = 0; i < options.length; i++) {
+    var button = document.createElement("button");
+    button.textContent = options[i];
+    button.addEventListener("click", function() {
+      scene35Answer(this.textContent);
+    });
+    buttonContainer.appendChild(button);
+  }
+}
+
+function scene35QuestionB(){
+                                        // options
+  options = ["Continue"];
+
+  // update buttons
+  var buttonContainer = document.getElementById("questionAnswer");
+  buttonContainer.innerHTML = "";
+
+  // building buttons and where to put them
+  for (var i = 0; i < options.length; i++) {
+    var button = document.createElement("button");
+    button.textContent = options[i];
+    button.addEventListener("click", function() {
+      scene35Answer(this.textContent);
     });
     buttonContainer.appendChild(button);
   }
