@@ -177,15 +177,6 @@ function scene86Answer(options){
       break;
     }
   }
-   if (answer != 'Go' && answer != 'Dragon Dutchess?'){
-        $('#message').html('That is' + not +' an option');
-  }
-  if (answer == 'Go'){
-    scene87();
-  }else if (answer == 'Dragon Dutchess'){
-    scene85();
-  }
-}
 
 //go
 function scene87(){
@@ -247,7 +238,8 @@ function scene89(){
 
 function scene89Answer(options){
   switch (options){
-    levelSelect300();
-    break;
+    case 'Level Select':
+      levelSelect300();
+      break;
   }
 }
