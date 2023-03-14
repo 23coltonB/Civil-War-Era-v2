@@ -1,6 +1,5 @@
 //needs to be 81-109 onwards
 function scene81(){
-  $('#answer').val('');
   currentScene = 81;
   if (sleep == true){
     if (player.sex == 'male'){
@@ -24,7 +23,7 @@ function scene81(){
 }
 
 function scene81Answer(options){
-  switch (options {
+  switch (options) {
     case 'Answer':
       scene82();
       break;

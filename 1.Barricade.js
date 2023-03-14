@@ -26,13 +26,13 @@ function scene11Answer(options){
     scene10();
     break;
        
-  case 'Arm Yourself':
+  case 'Arm yourself':
       scene14();
        break;
-  case 'Set a Trap':
+  case 'Set a trap':
       scene13();
        break;
-  case 'Hide Yourself':
+  case 'Hide yourself':
       scene12();
        break;
   }

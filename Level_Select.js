@@ -66,3 +66,8 @@ function reload(){
   LP = 0;
   scene1();
 }
+
+function troubleShooting(){
+  $('#scenetext').html('An error has occured');
+    $('#question').html('');
+}

@@ -133,7 +133,7 @@ function scene9Question(){
 
 // barricade
 function scene11QuestionA(){
-  options = ["Arm Yourself", "Set a Trap", "Hide Yourself"];
+  options = ["Arm yourself", "Set a trap", "Hide yourself"];
   
   // update buttons
   var buttonContainer = document.getElementById("questionAnswer");
@@ -1641,12 +1641,42 @@ function scene89Question(){
 
     //Escort - Hidden
 function scene81QuestionB(){
-  
+              // options
+  options = ["N/A"];
+
+  // update buttons
+  var buttonContainer = document.getElementById("questionAnswer");
+  buttonContainer.innerHTML = "";
+
+  // building buttons and where to put them
+  for (var i = 0; i < options.length; i++) {
+    var button = document.createElement("button");
+    button.textContent = options[i];
+    button.addEventListener("click", function() {
+      scene81Answer(this.textContent);
+    });
+    buttonContainer.appendChild(button);
+  }
 }
 
     //Escort - communication
 function scene81QuestionC(){
-  
+               // options
+  options = ["N/A"];
+
+  // update buttons
+  var buttonContainer = document.getElementById("questionAnswer");
+  buttonContainer.innerHTML = "";
+
+  // building buttons and where to put them
+  for (var i = 0; i < options.length; i++) {
+    var button = document.createElement("button");
+    button.textContent = options[i];
+    button.addEventListener("click", function() {
+      scene81Answer(this.textContent);
+    });
+    buttonContainer.appendChild(button);
+  }
 }
 
 //Level Select questions
@@ -1669,6 +1699,7 @@ function levelSelect300QuestionA(){
   }
 }
 
+
 function levelSelect300QuestionB(){
             // options
   options = ["Escort"];
@@ -1687,6 +1718,27 @@ function levelSelect300QuestionB(){
     buttonContainer.appendChild(button);
   }
 }
+
+/*
+function levelSelect300QuestionB(){
+            // options
+  options = ["Escort"];
+
+  // update buttons
+  var buttonContainer = document.getElementById("questionAnswer");
+  buttonContainer.innerHTML = "";
+
+  // building buttons and where to put them
+  for (var i = 0; i < options.length; i++) {
+    var button = document.createElement("button");
+    button.textContent = options[i];
+    button.addEventListener("click", function() {
+      LevelSelect300Answer(this.textContent);
+    });
+    buttonContainer.appendChild(button);
+  }
+}
+*/
 
 function levelSelect300QuestionC(){
             // options
